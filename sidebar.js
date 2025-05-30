@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div id="accountability-menu" class="side-menu">
       <div class="nd-menu">
         <div class="side-menu-title-close">
-          <h6><a href="#">Accountability report</a></h6>
+          <h6><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/">Accountability report</a></h6>
           <button class="close-btn" data-toggle-menu data-menu-id="accountability-menu">&times;</button>
         </div>
         <ul>
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <nav id="sidebar">
       <ul>
         <li class="active">
-          <a href="index.html">
+          <a href="https://dhcw.nhs.wales/annual-report-2025/">
             <i class="ph ph-house"></i>
             <span>Foreword</span>
           </a>
