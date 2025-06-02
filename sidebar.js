@@ -74,11 +74,11 @@ document.addEventListener('DOMContentLoaded', function () {
           <button class="close-btn" data-toggle-menu data-menu-id="performance-menu">&times;</button>
         </div>
         <ul>
-          <li><a href="#">Mission 1</a></li>
-          <li><a href="#">Mission 2</a></li>
-          <li><a href="#">Mission 3</a></li>
-          <li><a href="#">Mission 4</a></li>
-          <li><a href="#">Mission 5</a></li>
+          <li><a href="https://dhcw.nhs.wales/annual-report-2025/performance-overview/mission-1/">Mission 1</a></li>
+          <li><a href="https://dhcw.nhs.wales/annual-report-2025/performance-overview/mission-2/">Mission 2</a></li>
+          <li><a href="https://dhcw.nhs.wales/annual-report-2025/performance-overview/mission-3/">Mission 3</a></li>
+          <li><a href="https://dhcw.nhs.wales/annual-report-2025/performance-overview/mission-4/">Mission 4</a></li>
+          <li><a href="https://dhcw.nhs.wales/annual-report-2025/performance-overview/mission-5/">Mission 5</a></li>
         </ul>
       </div>
       <div class="trans-bg"></div>
@@ -91,14 +91,14 @@ document.addEventListener('DOMContentLoaded', function () {
           <button class="close-btn" data-toggle-menu data-menu-id="accountability-menu">&times;</button>
         </div>
         <ul>
-          <li><a href="#">Annual governance statement</a></li>
-          <li><a href="#">Other control framework elements</a></li>
-          <li><a href="#">Director’s Report for the period ended 31 March 2023</a></li>
-          <li><a href="#">Annual Governance Statement. Accountable Officer of the Special Health Authority.</a></li>
-          <li><a href="#">Statement of Directors’ Responsibilities</a></li>
-          <li><a href="#">Remuneration</a></li>
-          <li><a href="#">Staff Report</a></li>
-          <li><a href="#">Senedd Cymru/Welsh Parliamentary Accountability & Audit Report</a></li>
+           <li><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/annual-governance-statement/">Annual governance statement</a></li>
+          <li><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/control-framework/">Other control framework elements</a></li>
+          <li><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/directors-report/">Director’s Report</a></li>
+          <li><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/governance-statement/">Annual Governance Statement</a></li>
+          <li><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/directors-responsibilities/">Statement of Directors’ Responsibilities</a></li>
+          <li><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/remuneration/">Remuneration</a></li>
+          <li><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/staff-report/">Staff Report</a></li>
+          <li><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/audit-report/">Senedd Cymru/Welsh Parliamentary Accountability & Audit Report</a></li>
         </ul>
       </div>
       <div class="trans-bg"></div>
