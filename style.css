@@ -341,7 +341,12 @@ a:hover {
     margin-right: auto;
   }
 
+@media (min-width: 1600px) {
 
+  .side-menu {
+    display: block;
+  }
+}
 
 /* RESPONSIVE STYLES */
   @media (max-width: 1024px) {
