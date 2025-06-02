@@ -46,10 +46,9 @@ function outsideClickHandler(event) {
     closeAllMenus();
   }
 }
-
 document.addEventListener('click', outsideClickHandler);
 
-// Responsive adjustment
+// Responsive layout adjustment
 function adjustMainInfoMargin() {
   const mainInfo = document.querySelector('.main-info');
   if (!mainInfo) return;
@@ -60,16 +59,11 @@ function adjustMainInfoMargin() {
     mainInfo.style.marginLeft = '0';
   }
 }
-
 window.addEventListener('resize', adjustMainInfoMargin);
 
 // Setup on DOM ready
 document.addEventListener('DOMContentLoaded', function () {
-  const container = document.getElementById('sidebar-container');
-  if (!container) return;
-
-  // Insert sidebar HTML
-  container.innerHTML = `
+  const sidebarHTML = `
     <!-- Side Menus -->
     <div id="performance-menu" class="side-menu">
       <div class="nd-menu">
@@ -78,11 +72,11 @@ document.addEventListener('DOMContentLoaded', function () {
           <button class="close-btn" data-toggle-menu data-menu-id="performance-menu">&times;</button>
         </div>
         <ul>
-          <li><a href="#">Mission 1</a></li>
-          <li><a href="#">Mission 2</a></li>
-          <li><a href="#">Mission 3</a></li>
-          <li><a href="#">Mission 4</a></li>
-          <li><a href="#">Mission 5</a></li>
+          <li><a href="https://dhcw.nhs.wales/annual-report-2025/performance-overview/mission-1/">Mission 1</a></li>
+          <li><a href="https://dhcw.nhs.wales/annual-report-2025/performance-overview/mission-2/">Mission 2</a></li>
+          <li><a href="https://dhcw.nhs.wales/annual-report-2025/performance-overview/mission-3/">Mission 3</a></li>
+          <li><a href="https://dhcw.nhs.wales/annual-report-2025/performance-overview/mission-4/">Mission 4</a></li>
+          <li><a href="https://dhcw.nhs.wales/annual-report-2025/performance-overview/mission-5/">Mission 5</a></li>
         </ul>
       </div>
       <div class="trans-bg"></div>
@@ -95,14 +89,14 @@ document.addEventListener('DOMContentLoaded', function () {
           <button class="close-btn" data-toggle-menu data-menu-id="accountability-menu">&times;</button>
         </div>
         <ul>
-          <li><a href="#">Annual governance statement</a></li>
-          <li><a href="#">Other control framework elements</a></li>
-          <li><a href="#">Director’s Report for the period ended 31 March 2023</a></li>
-          <li><a href="#">Annual Governance Statement. Accountable Officer of the Special Health Authority.</a></li>
-          <li><a href="#">Statement of Directors’ Responsibilities</a></li>
-          <li><a href="#">Remuneration</a></li>
-          <li><a href="#">Staff Report</a></li>
-          <li><a href="#">Senedd Cymru/Welsh Parliamentary Accountability & Audit Report</a></li>
+          <li><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/annual-governance-statement/">Annual governance statement</a></li>
+          <li><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/control-framework/">Other control framework elements</a></li>
+          <li><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/directors-report/">Director’s Report</a></li>
+          <li><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/governance-statement/">Annual Governance Statement</a></li>
+          <li><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/directors-responsibilities/">Statement of Directors’ Responsibilities</a></li>
+          <li><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/remuneration/">Remuneration</a></li>
+          <li><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/staff-report/">Staff Report</a></li>
+          <li><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/audit-report/">Senedd Cymru/Welsh Parliamentary Accountability & Audit Report</a></li>
         </ul>
       </div>
       <div class="trans-bg"></div>
@@ -142,7 +136,12 @@ document.addEventListener('DOMContentLoaded', function () {
     </nav>
   `;
 
-  // Dynamic click handling
+  const container = document.getElementById('sidebar-container');
+  if (container) {
+    container.innerHTML = sidebarHTML;
+  }
+
+  // Handle dropdown button click
   document.addEventListener('click', function (event) {
     const toggleButton = event.target.closest('[data-toggle-menu]');
     if (toggleButton) {
@@ -153,34 +152,62 @@ document.addEventListener('DOMContentLoaded', function () {
     const bg = event.target.closest('.trans-bg');
     if (bg) {
       const parentMenu = bg.closest('.side-menu');
-      if (parentMenu?.id) toggleSideMenu(parentMenu.id);
+      if (parentMenu?.id) {
+        toggleSideMenu(parentMenu.id);
+      }
     }
   });
 
-  // Truncate long links
+  // Highlight active sidebar and sub-menu links
+  const currentURL = window.location.href;
+
+  const sidebarItems = [
+    {
+      type: 'link',
+      href: 'https://dhcw.nhs.wales/annual-report-2025/',
+      selector: 'a[href="https://dhcw.nhs.wales/annual-report-2025/"]',
+      menuId: null
+    },
+    {
+      type: 'button',
+      href: 'https://dhcw.nhs.wales/annual-report-2025/performance-overview/',
+      selector: 'button[data-menu-id="performance-menu"]',
+      menuId: 'performance-menu'
+    },
+    {
+      type: 'button',
+      href: 'https://dhcw.nhs.wales/annual-report-2025/accountability-report/',
+      selector: 'button[data-menu-id="accountability-menu"]',
+      menuId: 'accountability-menu'
+    }
+  ];
+
+  sidebarItems.forEach(item => {
+    if (currentURL.startsWith(item.href)) {
+      const el = document.querySelector(item.selector);
+      if (el) {
+        const parentLi = el.closest('li');
+        if (parentLi) parentLi.classList.add('active');
+        if (item.menuId && window.innerWidth > 1600) {
+          toggleSideMenu(item.menuId);
+        }
+      }
+    }
+  });
+
+  // Highlight sub-menu active links
+  document.querySelectorAll('.side-menu a').forEach(link => {
+    if (currentURL.startsWith(link.href)) {
+      link.classList.add('active');
+    }
+  });
+
+  // Truncate long sidebar links
   document.querySelectorAll("ul li a").forEach(link => {
     const fullText = link.textContent.trim();
     if (fullText.length > 23) {
       link.setAttribute("title", fullText);
       link.textContent = fullText.substring(0, 23) + "...";
-    }
-  });
-
-  // Set active state based on current URL
-  const currentURL = window.location.href;
-
-  const sidebarLinks = document.querySelectorAll('#sidebar a, #sidebar button');
-  sidebarLinks.forEach(link => {
-    const href = link.href || link.getAttribute('data-menu-id');
-    if (href && currentURL.startsWith(href)) {
-      const parentLi = link.closest('li');
-      if (parentLi) parentLi.classList.add('active');
-
-      // Auto-expand matching menu if width is wide
-      const menuId = link.getAttribute('data-menu-id');
-      if (window.innerWidth > 1600 && menuId) {
-        toggleSideMenu(menuId);
-      }
     }
   });
 });
