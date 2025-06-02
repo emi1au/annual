@@ -422,7 +422,7 @@ a:hover {
 
       p { font-size: 0.95rem; }
 
-      body{
+      .main-page{
     grid-template-columns: 1fr;
   }
 
