@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function () {
     container.innerHTML = sidebarHTML;
   }
 
-  // Highlight the active menu item based on URL
+  // Determine active menu and optionally open it
   const currentPath = window.location.pathname;
 
   const sidebarLinks = document.querySelectorAll('#sidebar a, #sidebar button');
@@ -152,6 +152,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const href = link.getAttribute('href');
     const menuId = link.getAttribute('data-menu-id');
 
+    // Highlight Foreword, PDF etc.
     if (href) {
       const resolvedHref = new URL(href, window.location.origin).pathname;
       if (currentPath === resolvedHref) {
@@ -159,12 +160,34 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
+    // Highlight and open Performance / Accountability menus based on subpaths
     if (!href && menuId) {
-      if (
-        (menuId === 'performance-menu' && currentPath.includes('/performance-report')) ||
-        (menuId === 'accountability-menu' && currentPath.includes('/accountability-report'))
-      ) {
+      let match = false;
+
+      if (menuId === 'performance-menu' && (
+        currentPath.includes('/performance-report') ||
+        currentPath.includes('/performance-overview') ||
+        currentPath.includes('/mission-')
+      )) {
+        match = true;
+      }
+
+      if (menuId === 'accountability-menu' && (
+        currentPath.includes('/accountability-report') ||
+        currentPath.includes('/accountability-overview') ||
+        currentPath.includes('/statement-of-directors-responsibilities') ||
+        currentPath.includes('/remuneration') ||
+        currentPath.includes('/staff-report') ||
+        currentPath.includes('/senedd') ||
+        currentPath.includes('/governance') ||
+        currentPath.includes('/control-framework')
+      )) {
+        match = true;
+      }
+
+      if (match) {
         link.parentElement.classList.add('active');
+        toggleSideMenu(menuId);
       }
     }
   });
