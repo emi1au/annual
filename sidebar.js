@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <!-- Sidebar -->
     <nav id="sidebar">
       <ul>
-        <li class="active">
+        <li>
           <a href="https://dhcw.nhs.wales/annual-report-2025/">
             <i class="ph ph-house"></i>
             <span>Foreword</span>
@@ -142,6 +142,32 @@ document.addEventListener('DOMContentLoaded', function () {
   if (container) {
     container.innerHTML = sidebarHTML;
   }
+
+  // Highlight the active menu item based on URL
+  const currentPath = window.location.pathname;
+
+  const sidebarLinks = document.querySelectorAll('#sidebar a, #sidebar button');
+
+  sidebarLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    const menuId = link.getAttribute('data-menu-id');
+
+    if (href) {
+      const resolvedHref = new URL(href, window.location.origin).pathname;
+      if (currentPath === resolvedHref) {
+        link.parentElement.classList.add('active');
+      }
+    }
+
+    if (!href && menuId) {
+      if (
+        (menuId === 'performance-menu' && currentPath.includes('/performance-report')) ||
+        (menuId === 'accountability-menu' && currentPath.includes('/accountability-report'))
+      ) {
+        link.parentElement.classList.add('active');
+      }
+    }
+  });
 
   // Dynamic button click handling
   document.addEventListener('click', function (event) {
