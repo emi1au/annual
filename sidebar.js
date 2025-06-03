@@ -1,3 +1,4 @@
+// Track active menu
 let activeMenuId = null;
 
 // Toggle menu visibility
@@ -30,16 +31,16 @@ function closeAllMenus() {
   });
 
   const mainInfo = document.querySelector('.main-info');
-  if (window.innerWidth > 1600 && mainInfo) {
+  if (mainInfo) {
     mainInfo.style.marginLeft = '0';
   }
 
   activeMenuId = null;
 }
 
-// Detect outside click to close menus only on mobile
+// Outside click to close (only on mobile <768px)
 function outsideClickHandler(event) {
-  if (window.innerWidth >= 768) return; // Prevent closing on desktop
+  if (window.innerWidth >= 768) return;
 
   const clickedInsideMenu = event.target.closest('.side-menu');
   const clickedToggleButton = event.target.closest('[data-toggle-menu]');
@@ -51,7 +52,7 @@ function outsideClickHandler(event) {
 
 document.addEventListener('click', outsideClickHandler);
 
-// Responsive adjustment
+// Adjust margin on resize
 function adjustMainInfoMargin() {
   const mainInfo = document.querySelector('.main-info');
   if (!mainInfo) return;
@@ -63,24 +64,31 @@ function adjustMainInfoMargin() {
   }
 }
 
-window.addEventListener('resize', adjustMainInfoMargin);
+window.addEventListener('resize', () => {
+  adjustMainInfoMargin();
 
-// Setup on DOM ready
+  // Auto-close menu if resizing to small screen
+  if (window.innerWidth <= 1600 && activeMenuId) {
+    closeAllMenus();
+  }
+});
+
+// DOM ready
 document.addEventListener('DOMContentLoaded', function () {
   const sidebarHTML = `
     <!-- Side Menus -->
     <div id="performance-menu" class="side-menu">
       <div class="nd-menu">
         <div class="side-menu-title-close">
-          <h6><a href="https://dhcw.nhs.wales/annual-report-2025/performance-overview/">Performance report</a></h6>
+          <h6><a href="/annual-report-2025/performance-overview/">Performance report</a></h6>
           <button class="close-btn" data-toggle-menu data-menu-id="performance-menu">&times;</button>
         </div>
         <ul>
-          <li><a href="https://dhcw.nhs.wales/annual-report-2025/performance-overview/mission-1/">Mission 1</a></li>
-          <li><a href="https://dhcw.nhs.wales/annual-report-2025/performance-overview/mission-2/">Mission 2</a></li>
-          <li><a href="https://dhcw.nhs.wales/annual-report-2025/performance-overview/mission-3/">Mission 3</a></li>
-          <li><a href="https://dhcw.nhs.wales/annual-report-2025/performance-overview/mission-4/">Mission 4</a></li>
-          <li><a href="https://dhcw.nhs.wales/annual-report-2025/performance-overview/mission-5/">Mission 5</a></li>
+          <li><a href="/annual-report-2025/performance-overview/mission-1/">Mission 1</a></li>
+          <li><a href="/annual-report-2025/performance-overview/mission-2/">Mission 2</a></li>
+          <li><a href="/annual-report-2025/performance-overview/mission-3/">Mission 3</a></li>
+          <li><a href="/annual-report-2025/performance-overview/mission-4/">Mission 4</a></li>
+          <li><a href="/annual-report-2025/performance-overview/mission-5/">Mission 5</a></li>
         </ul>
       </div>
       <div class="trans-bg"></div>
@@ -89,18 +97,18 @@ document.addEventListener('DOMContentLoaded', function () {
     <div id="accountability-menu" class="side-menu">
       <div class="nd-menu">
         <div class="side-menu-title-close">
-          <h6><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/">Accountability report</a></h6>
+          <h6><a href="/annual-report-2025/accountability-report/">Accountability report</a></h6>
           <button class="close-btn" data-toggle-menu data-menu-id="accountability-menu">&times;</button>
         </div>
         <ul>
-           <li><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/annual-governance-statement/">Annual governance statement</a></li>
-          <li><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/control-framework/">Other control framework elements</a></li>
-          <li><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/directors-report/">Director’s Report</a></li>
-          <li><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/governance-statement/">Annual Governance Statement</a></li>
-          <li><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/directors-responsibilities/">Statement of Directors’ Responsibilities</a></li>
-          <li><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/remuneration/">Remuneration</a></li>
-          <li><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/staff-report/">Staff Report</a></li>
-          <li><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/audit-report/">Senedd Cymru/Welsh Parliamentary Accountability & Audit Report</a></li>
+          <li><a href="/annual-report-2025/accountability-report/annual-governance-statement/">Annual governance statement</a></li>
+          <li><a href="/annual-report-2025/accountability-report/control-framework/">Other control framework elements</a></li>
+          <li><a href="/annual-report-2025/accountability-report/directors-report/">Director’s Report</a></li>
+          <li><a href="/annual-report-2025/accountability-report/governance-statement/">Governance Statement</a></li>
+          <li><a href="/annual-report-2025/accountability-report/directors-responsibilities/">Directors’ Responsibilities</a></li>
+          <li><a href="/annual-report-2025/accountability-report/remuneration/">Remuneration</a></li>
+          <li><a href="/annual-report-2025/accountability-report/staff-report/">Staff Report</a></li>
+          <li><a href="/annual-report-2025/accountability-report/audit-report/">Audit Report</a></li>
         </ul>
       </div>
       <div class="trans-bg"></div>
@@ -110,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <nav id="sidebar">
       <ul>
         <li>
-          <a href="https://dhcw.nhs.wales/annual-report-2025/">
+          <a href="/annual-report-2025/">
             <i class="ph ph-house"></i>
             <span>Foreword</span>
           </a>
@@ -141,20 +149,15 @@ document.addEventListener('DOMContentLoaded', function () {
   `;
 
   const container = document.getElementById('sidebar-container');
-  if (container) {
-    container.innerHTML = sidebarHTML;
-  }
+  if (container) container.innerHTML = sidebarHTML;
 
-  // Determine active menu and optionally open it
   const currentPath = window.location.pathname;
-
   const sidebarLinks = document.querySelectorAll('#sidebar a, #sidebar button');
 
   sidebarLinks.forEach(link => {
     const href = link.getAttribute('href');
     const menuId = link.getAttribute('data-menu-id');
 
-    // Highlight Foreword, PDF etc.
     if (href) {
       const resolvedHref = new URL(href, window.location.origin).pathname;
       if (currentPath === resolvedHref) {
@@ -162,39 +165,33 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
-    // Highlight and open Performance / Accountability menus based on subpaths
     if (!href && menuId) {
       let match = false;
-
       if (menuId === 'performance-menu' && (
         currentPath.includes('/performance-report') ||
         currentPath.includes('/performance-overview') ||
         currentPath.includes('/mission-')
-      )) {
-        match = true;
-      }
+      )) match = true;
 
       if (menuId === 'accountability-menu' && (
         currentPath.includes('/accountability-report') ||
-        currentPath.includes('/accountability-overview') ||
-        currentPath.includes('/statement-of-directors-responsibilities') ||
+        currentPath.includes('/control-framework') ||
         currentPath.includes('/remuneration') ||
         currentPath.includes('/staff-report') ||
-        currentPath.includes('/senedd') ||
-        currentPath.includes('/governance') ||
-        currentPath.includes('/control-framework')
-      )) {
-        match = true;
-      }
+        currentPath.includes('/audit-report') ||
+        currentPath.includes('/governance')
+      )) match = true;
 
       if (match) {
         link.parentElement.classList.add('active');
-        toggleSideMenu(menuId);
+        if (window.innerWidth > 1600) {
+          toggleSideMenu(menuId); // only auto-open above 1600
+        }
       }
     }
   });
 
-  // Dynamic button click handling
+  // Global click handler for toggles and trans-bg
   document.addEventListener('click', function (event) {
     const toggleButton = event.target.closest('[data-toggle-menu]');
     if (toggleButton) {
@@ -203,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     const bg = event.target.closest('.trans-bg');
-    if (bg) {
+    if (bg && window.innerWidth <= 1600) {
       const parentMenu = bg.closest('.side-menu');
       if (parentMenu?.id) {
         toggleSideMenu(parentMenu.id);
