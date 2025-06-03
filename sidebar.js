@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div id="performance-menu" class="side-menu">
       <div class="nd-menu">
         <div class="side-menu-title-close">
-          <h6><a href="#">Performance report</a></h6>
+          <h6><a href="https://dhcw.nhs.wales/annual-report-2025/performance-overview/">Performance report</a></h6>
           <button class="close-btn" data-toggle-menu data-menu-id="performance-menu">&times;</button>
         </div>
         <ul>
