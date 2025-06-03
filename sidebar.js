@@ -1,9 +1,19 @@
 let activeMenuId = null;
 
+// Check if screen is wide enough
+function isWideScreen() {
+  return window.innerWidth > 1600;
+}
+
 // Toggle menu visibility
 function toggleSideMenu(menuId) {
   const menus = document.querySelectorAll('.side-menu');
   const mainInfo = document.querySelector('.main-info');
+
+  if (!isWideScreen()) {
+    closeAllMenus(); // Don't allow toggle on small screens
+    return;
+  }
 
   if (activeMenuId === menuId) {
     closeAllMenus();
@@ -17,7 +27,7 @@ function toggleSideMenu(menuId) {
     targetMenu.style.display = 'block';
     activeMenuId = menuId;
 
-    if (window.innerWidth > 1600 && mainInfo) {
+    if (mainInfo) {
       mainInfo.style.marginLeft = '234px';
     }
   }
@@ -30,7 +40,7 @@ function closeAllMenus() {
   });
 
   const mainInfo = document.querySelector('.main-info');
-  if (window.innerWidth > 1600 && mainInfo) {
+  if (mainInfo) {
     mainInfo.style.marginLeft = '0';
   }
 
@@ -54,10 +64,17 @@ function adjustMainInfoMargin() {
   const mainInfo = document.querySelector('.main-info');
   if (!mainInfo) return;
 
-  if (window.innerWidth > 1600 && activeMenuId) {
+  if (isWideScreen() && activeMenuId) {
     mainInfo.style.marginLeft = '234px';
   } else {
     mainInfo.style.marginLeft = '0';
+  }
+
+  if (!isWideScreen()) {
+    closeAllMenus();
+    document.querySelectorAll('.side-menu').forEach(menu => {
+      menu.style.display = 'none';
+    });
   }
 }
 
@@ -91,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
           <button class="close-btn" data-toggle-menu data-menu-id="accountability-menu">&times;</button>
         </div>
         <ul>
-           <li><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/annual-governance-statement/">Annual governance statement</a></li>
+          <li><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/annual-governance-statement/">Annual governance statement</a></li>
           <li><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/control-framework/">Other control framework elements</a></li>
           <li><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/directors-report/">Director’s Report</a></li>
           <li><a href="https://dhcw.nhs.wales/annual-report-2025/accountability-report/governance-statement/">Annual Governance Statement</a></li>
@@ -143,16 +160,14 @@ document.addEventListener('DOMContentLoaded', function () {
     container.innerHTML = sidebarHTML;
   }
 
-  // Determine active menu and optionally open it
+  // Highlight active links and open menus
   const currentPath = window.location.pathname;
-
   const sidebarLinks = document.querySelectorAll('#sidebar a, #sidebar button');
 
   sidebarLinks.forEach(link => {
     const href = link.getAttribute('href');
     const menuId = link.getAttribute('data-menu-id');
 
-    // Highlight Foreword, PDF etc.
     if (href) {
       const resolvedHref = new URL(href, window.location.origin).pathname;
       if (currentPath === resolvedHref) {
@@ -160,7 +175,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
-    // Highlight and open Performance / Accountability menus based on subpaths
     if (!href && menuId) {
       let match = false;
 
@@ -192,16 +206,22 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Dynamic button click handling
+  // Handle menu toggle and background clicks
   document.addEventListener('click', function (event) {
     const toggleButton = event.target.closest('[data-toggle-menu]');
     if (toggleButton) {
       const menuId = toggleButton.getAttribute('data-menu-id');
-      if (menuId) toggleSideMenu(menuId);
+      if (menuId) {
+        if (activeMenuId === menuId || !isWideScreen()) {
+          closeAllMenus();
+        } else {
+          toggleSideMenu(menuId);
+        }
+      }
     }
 
     const bg = event.target.closest('.trans-bg');
-    if (bg) {
+    if (bg && !isWideScreen()) {
       const parentMenu = bg.closest('.side-menu');
       if (parentMenu?.id) {
         toggleSideMenu(parentMenu.id);
@@ -209,7 +229,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Truncate long links
+  // Truncate long link text
   document.querySelectorAll("ul li a").forEach(link => {
     let fullText = link.textContent.trim();
     if (fullText.length > 23) {
