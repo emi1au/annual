@@ -164,44 +164,56 @@ document.addEventListener('DOMContentLoaded', function () {
   if (container) container.innerHTML = sidebarHTML;
 
   const currentPath = window.location.pathname;
-  const sidebarLinks = document.querySelectorAll('#sidebar a, #sidebar button');
 
-  sidebarLinks.forEach(link => {
+  // Highlight all relevant links
+  const allLinks = document.querySelectorAll('#sidebar a, .side-menu ul li a, .side-menu h6 a');
+
+  allLinks.forEach(link => {
     const href = link.getAttribute('href');
-    const menuId = link.getAttribute('data-menu-id');
+    if (!href) return;
 
-    if (href) {
-      const resolvedHref = new URL(href, window.location.origin).pathname;
-      if (currentPath === resolvedHref) {
-        link.classList.add('active');
-      } else if (currentPath.startsWith(resolvedHref) && resolvedHref !== '/') {
-        link.classList.add('active');
-      }
+    const resolvedHref = new URL(href, window.location.origin).pathname;
+    if (currentPath === resolvedHref) {
+      link.classList.add('active');
+      const parentLi = link.closest('li');
+      if (parentLi) parentLi.classList.add('active');
     }
+  });
 
-    if (!href && menuId) {
-      let match = false;
-      if (menuId === 'performance-menu' && (
-        currentPath.includes('/performance-report') ||
-        currentPath.includes('/performance-overview') ||
-        currentPath.includes('/mission-')
-      )) match = true;
+  // Activate and open correct menu
+  const menuMatches = [
+    {
+      menuId: 'performance-menu',
+      matchPaths: [
+        '/annual-report-2025/performance-overview/',
+        '/annual-report-2025/performance-overview/mission-1/',
+        '/annual-report-2025/performance-overview/mission-2/',
+        '/annual-report-2025/performance-overview/mission-3/',
+        '/annual-report-2025/performance-overview/mission-4/',
+        '/annual-report-2025/performance-overview/mission-5/'
+      ]
+    },
+    {
+      menuId: 'accountability-menu',
+      matchPaths: [
+        '/annual-report-2025/accountability-report/',
+        '/annual-report-2025/accountability-report/annual-governance-statement/',
+        '/annual-report-2025/accountability-report/control-framework/',
+        '/annual-report-2025/accountability-report/directors-report/',
+        '/annual-report-2025/accountability-report/governance-statement/',
+        '/annual-report-2025/accountability-report/directors-responsibilities/',
+        '/annual-report-2025/accountability-report/remuneration/',
+        '/annual-report-2025/accountability-report/staff-report/',
+        '/annual-report-2025/accountability-report/audit-report/'
+      ]
+    }
+  ];
 
-      if (menuId === 'accountability-menu' && (
-        currentPath.includes('/accountability-report') ||
-        currentPath.includes('/control-framework') ||
-        currentPath.includes('/remuneration') ||
-        currentPath.includes('/staff-report') ||
-        currentPath.includes('/audit-report') ||
-        currentPath.includes('/governance')
-      )) match = true;
-
-      if (match) {
-        link.classList.add('active');
-        if (window.innerWidth > 1600) {
-          toggleSideMenu(menuId);
-        }
-      }
+  menuMatches.forEach(({ menuId, matchPaths }) => {
+    if (matchPaths.includes(currentPath)) {
+      const toggleBtn = document.querySelector(`[data-menu-id="${menuId}"]`);
+      if (toggleBtn) toggleBtn.parentElement.classList.add('active');
+      if (window.innerWidth > 1600) toggleSideMenu(menuId);
     }
   });
 
