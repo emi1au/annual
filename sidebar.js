@@ -165,55 +165,55 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const currentPath = window.location.pathname;
 
-  // Highlight all relevant links
-  const allLinks = document.querySelectorAll('#sidebar a, .side-menu ul li a, .side-menu h6 a');
+  // Remove active classes just in case
+  document.querySelectorAll('#sidebar li.active').forEach(li => li.classList.remove('active'));
+  document.querySelectorAll('.side-menu ul li a.active').forEach(a => a.classList.remove('active'));
 
-  allLinks.forEach(link => {
+  // Find all menu buttons and links
+  const sidebarMenuButtons = document.querySelectorAll('#sidebar button[data-toggle-menu]');
+  const sidebarMenuLinks = document.querySelectorAll('.side-menu ul li a');
+
+  // Track which menu button should be active
+  let activeMenuBtnId = null;
+
+  // Helper: check if currentPath matches or includes target URL path
+  function isPathActive(target) {
+    // Normalize trailing slash for comparison
+    const normCurrent = currentPath.endsWith('/') ? currentPath : currentPath + '/';
+    const normTarget = target.endsWith('/') ? target : target + '/';
+
+    return normCurrent === normTarget || normCurrent.startsWith(normTarget);
+  }
+
+  // Mark submenu links active if they match current path
+  sidebarMenuLinks.forEach(link => {
     const href = link.getAttribute('href');
-    if (!href) return;
-
-    const resolvedHref = new URL(href, window.location.origin).pathname;
-    if (currentPath === resolvedHref) {
+    if (href && isPathActive(href)) {
       link.classList.add('active');
-      const parentLi = link.closest('li');
-      if (parentLi) parentLi.classList.add('active');
+
+      // Determine which menu this link belongs to by walking up the DOM
+      const sideMenu = link.closest('.side-menu');
+      if (sideMenu) {
+        activeMenuBtnId = sideMenu.id; // e.g. "performance-menu" or "accountability-menu"
+      }
     }
   });
 
-  // Activate and open correct menu
-  const menuMatches = [
-    {
-      menuId: 'performance-menu',
-      matchPaths: [
-        '/annual-report-2025/performance-overview/',
-        '/annual-report-2025/performance-overview/mission-1/',
-        '/annual-report-2025/performance-overview/mission-2/',
-        '/annual-report-2025/performance-overview/mission-3/',
-        '/annual-report-2025/performance-overview/mission-4/',
-        '/annual-report-2025/performance-overview/mission-5/'
-      ]
-    },
-    {
-      menuId: 'accountability-menu',
-      matchPaths: [
-        '/annual-report-2025/accountability-report/',
-        '/annual-report-2025/accountability-report/annual-governance-statement/',
-        '/annual-report-2025/accountability-report/control-framework/',
-        '/annual-report-2025/accountability-report/directors-report/',
-        '/annual-report-2025/accountability-report/governance-statement/',
-        '/annual-report-2025/accountability-report/directors-responsibilities/',
-        '/annual-report-2025/accountability-report/remuneration/',
-        '/annual-report-2025/accountability-report/staff-report/',
-        '/annual-report-2025/accountability-report/audit-report/'
-      ]
+  // Mark top menu buttons active and open menu if needed
+  sidebarMenuButtons.forEach(button => {
+    const menuId = button.getAttribute('data-menu-id');
+    if (menuId === activeMenuBtnId) {
+      button.parentElement.classList.add('active');
+      toggleSideMenu(menuId);
     }
-  ];
+  });
 
-  menuMatches.forEach(({ menuId, matchPaths }) => {
-    if (matchPaths.includes(currentPath)) {
-      const toggleBtn = document.querySelector(`[data-menu-id="${menuId}"]`);
-      if (toggleBtn) toggleBtn.parentElement.classList.add('active');
-      if (window.innerWidth > 1600) toggleSideMenu(menuId);
+  // Also mark any top-level link active if currentPath matches exactly
+  const sidebarTopLinks = document.querySelectorAll('#sidebar > ul > li > a');
+  sidebarTopLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href && isPathActive(href)) {
+      link.parentElement.classList.add('active');
     }
   });
 
@@ -232,14 +232,3 @@ document.addEventListener('DOMContentLoaded', function () {
         toggleSideMenu(parentMenu.id);
       }
     }
-  });
-
-  // Truncate long links
-  document.querySelectorAll("ul li a").forEach(link => {
-    let fullText = link.textContent.trim();
-    if (fullText.length > 23) {
-      link.setAttribute("title", fullText);
-      link.textContent = fullText.substring(0, 23) + "...";
-    }
-  });
-});
