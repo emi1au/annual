@@ -343,6 +343,75 @@ a:hover {
   }
 
 
+
+.page-menu {
+    position: sticky;
+    top: 8px;
+    width: 100%;
+    background: #fff;
+    border: 1px solid hsl(217.78deg 44.75% 90%);
+    padding: 15px;
+    z-index: 2;
+    overflow: hidden;
+    border-radius: var(--R-B);
+    margin-top: 8px;
+  }
+
+  /* Scrollable menu container */
+  .sub-menu {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    padding-bottom: 15px;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap;
+    scrollbar-width: auto; /* Show scrollbar in Firefox */
+  }
+
+  .sub-menu a.active {
+    background: hsl(217.78deg 44.75% 90%);
+    color: hsl(217.78deg 44.75% 10%);
+  }
+
+  /* Show scrollbar for Chrome, Safari */
+  .sub-menu::-webkit-scrollbar {
+    height: 15px;
+  }
+
+  .sub-menu::-webkit-scrollbar-track {
+    background: hsl(217.78deg 44.75% 97%);
+    border-radius: var(--R-B);
+  }
+
+  .sub-menu::-webkit-scrollbar-thumb {
+    background: hsl(217.78deg 44.75% 93%);
+    border-radius: var(--R-B);
+  }
+
+  .sub-menu::-webkit-scrollbar-thumb:hover {
+    background: hsl(217.78deg 44.75% 90%);
+  }
+
+  /* Navigation links */
+  .sub-menu a {
+    flex-shrink: 0;
+    font-size: 12px;
+    display: inline-block;
+    padding: 14px;
+    border-radius: 7px;
+    color: hsl(217.78deg 44.75% 25%);
+    text-decoration: none;
+    background: hsl(217.78deg 44.75% 97%);
+    border: 1px solid hsl(217.78deg 44.75% 90%);
+    transition: 0.25s;
+    white-space: nowrap;
+  }
+
+  /* Hover effect */
+  .sub-menu a:hover {
+    background: hsl(217.78deg 44.75% 90%);
+  }
+
 /* RESPONSIVE STYLES */
   @media (max-width: 1024px) {
       .container {
