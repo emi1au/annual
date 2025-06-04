@@ -64,12 +64,20 @@ function adjustMainInfoMargin() {
   }
 }
 
+// Handle resize
 window.addEventListener('resize', () => {
   adjustMainInfoMargin();
 
-  // Auto-close menu if resizing to small screen
   if (window.innerWidth <= 1600 && activeMenuId) {
     closeAllMenus();
+  }
+
+  // Re-open menu when resizing above 1600px
+  if (window.innerWidth > 1600 && activeMenuId) {
+    const menu = document.getElementById(activeMenuId);
+    if (menu) {
+      menu.style.display = 'block';
+    }
   }
 });
 
