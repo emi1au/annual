@@ -85,6 +85,19 @@ window.addEventListener('resize', () => {
   }
 });
 
+// Helper functions
+function pathsMatchExactly(path1, path2) {
+  const a = path1.endsWith('/') ? path1 : path1 + '/';
+  const b = path2.endsWith('/') ? path2 : path2 + '/';
+  return a === b;
+}
+
+function pathStartsWith(base, target) {
+  const normBase = base.endsWith('/') ? base : base + '/';
+  const normTarget = target.endsWith('/') ? target : target + '/';
+  return normBase.startsWith(normTarget);
+}
+
 // DOM ready
 document.addEventListener('DOMContentLoaded', function () {
   const sidebarHTML = `
@@ -176,19 +189,10 @@ document.addEventListener('DOMContentLoaded', function () {
   // Track which menu button should be active
   let activeMenuBtnId = null;
 
-  // Helper: check if currentPath matches or includes target URL path
-  function isPathActive(target) {
-    // Normalize trailing slash for comparison
-    const normCurrent = currentPath.endsWith('/') ? currentPath : currentPath + '/';
-    const normTarget = target.endsWith('/') ? target : target + '/';
-
-    return normCurrent === normTarget || normCurrent.startsWith(normTarget);
-  }
-
-  // Mark submenu links active if they match current path
+  // Mark submenu links active if they match current path by starting with path
   sidebarMenuLinks.forEach(link => {
     const href = link.getAttribute('href');
-    if (href && isPathActive(href)) {
+    if (href && pathStartsWith(currentPath, href)) {
       link.classList.add('active');
 
       // Determine which menu this link belongs to by walking up the DOM
@@ -208,17 +212,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  // Mark only exact matching top-level links active
   const sidebarTopLinks = document.querySelectorAll('#sidebar > ul > li > a');
-sidebarTopLinks.forEach(link => {
-  const href = link.getAttribute('href');
-  const normCurrent = currentPath.endsWith('/') ? currentPath : currentPath + '/';
-  const normHref = href.endsWith('/') ? href : href + '/';
-
-  // Match only if the path is exactly the same
-  if (normCurrent === normHref) {
-    link.parentElement.classList.add('active');
-  }
-});
+  sidebarTopLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href && pathsMatchExactly(currentPath, href)) {
+      link.parentElement.classList.add('active');
+    }
+  });
 
   // Global click handler for toggles and trans-bg
   document.addEventListener('click', function (event) {
