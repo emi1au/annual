@@ -1,4 +1,4 @@
-// Track active menu globally 
+// Track active menu globally
 let activeMenuId = null;
 
 // Toggle menu visibility
@@ -79,28 +79,6 @@ window.addEventListener('resize', () => {
     }
   }
 });
-
-// Load Lenis smooth scroll from CDN
-const lenisScript = document.createElement('script');
-lenisScript.src = 'https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.17/bundled/lenis.min.js';
-lenisScript.onload = () => {
-  // Initialize Lenis smooth scrolling once script loads
-  const lenis = new Lenis({
-    duration: 1.2,
-    easing: t => t * (2 - t),  // easeOutQuad easing
-    smooth: true,
-    direction: 'vertical',
-    gestureDirection: 'vertical',
-    smoothTouch: true,
-  });
-
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-  requestAnimationFrame(raf);
-};
-document.head.appendChild(lenisScript);
 
 // DOM ready
 document.addEventListener('DOMContentLoaded', function () {
@@ -259,56 +237,59 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  adjustMainInfoMargin();
+      adjustMainInfoMargin();
 
-  const h1 = document.querySelector("#split-text");
-  if (h1) {
-    const words = h1.innerHTML.split(" ").map(word => `<span class="word">${word}</span>`).join(" ");
-    h1.innerHTML = words;
-  }
+      const h1 = document.querySelector("#split-text");
+      if (h1) {
+        const words = h1.innerHTML.split(" ").map(word => `<span class="word">${word}</span>`).join(" ");
+        h1.innerHTML = words;
+      }
 
-  gsap.to(".logo", {
-    x: "0%",
-    opacity: 1,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-    delay: 0.1,
-  });
+      gsap.to(".logo", {
+        x: "0%",
+        opacity: 1,
+        duration: 0.8,
+        ease: "back.out(1.7)",
+        delay: 0.1,
+      });
 
-  gsap.to("h1", { opacity: 1 });
+      gsap.to("h1", { opacity: 1 });
 
-  gsap.to(".word", {
-    y: "0%",
-    opacity: 1,
-    duration: 1,
-    ease: "back.out(1.7)",
-    stagger: 0.1,
-    delay: 0.2,
-  });
+      gsap.to(".word", {
+        y: "0%",
+        opacity: 1,
+        duration: 1,
+        ease: "back.out(1.7)",
+        stagger: 0.1,
+        delay: 0.2,
+      });
 
-  // Header scroll animation
-  gsap.to("header", {
-    duration: 0.5,
-    filter: "grayscale(1)",
-    scrollTrigger: {
-      trigger: "header",
-      start: "top top",
-      end: "bottom top",
-      ease: "back.out(1.7)",
-      scrub: true,
-      scroller: "main" // Required for custom scroller
-    }
-  });
+      // Header scroll animation
+      gsap.to("header", {
+        duration: 0.5,
+        filter: "grayscale(1)",
+        scrollTrigger: {
+          trigger: "header",
+          start: "top top",
+          end: "bottom top",
+          ease: "back.out(1.7)",
+          scrub: true,
+          scroller: "main" // Required for custom scroller
+        }
+      });
 
-  gsap.to(".board-team", {
-    ease: "none",
-    filter: "grayscale(0)",
-    scrollTrigger: {
-      trigger: ".content-img",
-      start: "-50% center", // when .content-img enters the viewport
-      end: "center center",   // when it leaves
-      scrub: true,
-      scroller: "main"
-    }
-  });
-});
+      gsap.to(".board-team", {
+        ease: "none",
+        filter: "grayscale(0)",
+        scrollTrigger: {
+          trigger: ".content-img",
+          start: "-50% center", // when .content-img enters the viewport
+          end: "center center",   // when it leaves
+          scrub: true,
+          scroller: "main"
+        }
+      });
+
+      
+
+    });
