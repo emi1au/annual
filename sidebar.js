@@ -235,3 +235,61 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+      adjustMainInfoMargin();
+
+      const h1 = document.querySelector("#split-text");
+      if (h1) {
+        const words = h1.innerHTML.split(" ").map(word => `<span class="word">${word}</span>`).join(" ");
+        h1.innerHTML = words;
+      }
+
+      gsap.to(".logo", {
+        x: "0%",
+        opacity: 1,
+        duration: 0.8,
+        ease: "back.out(1.7)",
+        delay: 0.1,
+      });
+
+      gsap.to("h1", { opacity: 1 });
+
+      gsap.to(".word", {
+        y: "0%",
+        opacity: 1,
+        duration: 1,
+        ease: "back.out(1.7)",
+        stagger: 0.1,
+        delay: 0.2,
+      });
+
+      // Header scroll animation
+      gsap.to("header", {
+        duration: 0.5,
+        filter: "grayscale(1)",
+        scrollTrigger: {
+          trigger: "header",
+          start: "top top",
+          end: "bottom top",
+          ease: "back.out(1.7)",
+          scrub: true,
+          scroller: "main" // Required for custom scroller
+        }
+      });
+
+      gsap.to(".board-team", {
+        ease: "none",
+        filter: "grayscale(0)",
+        scrollTrigger: {
+          trigger: ".content-img",
+          start: "-50% center", // when .content-img enters the viewport
+          end: "center center",   // when it leaves
+          scrub: true,
+          scroller: "main"
+        }
+      });
+
+      
+
+    });
