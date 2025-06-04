@@ -232,3 +232,5 @@ document.addEventListener('DOMContentLoaded', function () {
         toggleSideMenu(parentMenu.id);
       }
     }
+  });
+});
