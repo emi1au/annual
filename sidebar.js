@@ -173,7 +173,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if (href) {
       const resolvedHref = new URL(href, window.location.origin).pathname;
       if (currentPath === resolvedHref) {
-        link.parentElement.classList.add('active');
+        link.classList.add('active');
+      } else if (currentPath.startsWith(resolvedHref) && resolvedHref !== '/') {
+        link.classList.add('active');
       }
     }
 
@@ -195,9 +197,9 @@ document.addEventListener('DOMContentLoaded', function () {
       )) match = true;
 
       if (match) {
-        link.parentElement.classList.add('active');
+        link.classList.add('active');
         if (window.innerWidth > 1600) {
-          toggleSideMenu(menuId); // only auto-open above 1600
+          toggleSideMenu(menuId);
         }
       }
     }
