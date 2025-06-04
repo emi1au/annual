@@ -1,21 +1,5 @@
-// Track active menu
+// Track active menu globally
 let activeMenuId = null;
-
-// Normalize URL path for consistent comparison (removes trailing slash except root "/")
-function normalizePath(path) {
-  if (path.length > 1 && path.endsWith('/')) {
-    return path.slice(0, -1);
-  }
-  return path;
-}
-
-// Check if current path matches or starts with target path (for submenu links)
-function pathMatchesOrStartsWith(current, target) {
-  const c = normalizePath(current);
-  const t = normalizePath(target);
-  // Exact match or current path is inside target (like submenu)
-  return c === t || c.startsWith(t + '/');
-}
 
 // Toggle menu visibility
 function toggleSideMenu(menuId) {
@@ -52,9 +36,6 @@ function closeAllMenus() {
   }
 
   activeMenuId = null;
-
-  // Also remove active class from all sidebar menu items and buttons
-  document.querySelectorAll('#sidebar li.active').forEach(el => el.classList.remove('active'));
 }
 
 // Outside click to close (only on mobile <768px)
@@ -86,20 +67,15 @@ function adjustMainInfoMargin() {
 window.addEventListener('resize', () => {
   adjustMainInfoMargin();
 
-  if (window.innerWidth <= 1600 && activeMenuId) {
-    // Auto-close menu when resizing to smaller screen
+  if (window.innerWidth <= 1600) {
     closeAllMenus();
-  }
-
-  if (window.innerWidth > 1600 && activeMenuId) {
-    // Reopen menu when resizing back to large screen
+  } else if (activeMenuId) {
+    // Show the active menu again if resizing larger
     const targetMenu = document.getElementById(activeMenuId);
     if (targetMenu) {
       targetMenu.style.display = 'block';
       const mainInfo = document.querySelector('.main-info');
-      if (mainInfo) {
-        mainInfo.style.marginLeft = '234px';
-      }
+      if (mainInfo) mainInfo.style.marginLeft = '234px';
     }
   }
 });
@@ -188,40 +164,35 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('#sidebar li.active').forEach(li => li.classList.remove('active'));
   document.querySelectorAll('.side-menu ul li a.active').forEach(a => a.classList.remove('active'));
 
-  // Find all menu buttons and links
   const sidebarMenuButtons = document.querySelectorAll('#sidebar button[data-toggle-menu]');
   const sidebarMenuLinks = document.querySelectorAll('.side-menu ul li a');
+  const sidebarTopLinks = document.querySelectorAll('#sidebar > ul > li > a');
 
-  // Track which menu button should be active
   let activeMenuBtnId = null;
 
-  // Mark submenu links active if they match current path
+  // Normalize path to have trailing slash
+  function normalizePath(path) {
+    return path.endsWith('/') ? path : path + '/';
+  }
+
+  // Check if current path matches or starts with target path (for submenu links)
+  function pathMatchesOrStartsWith(current, target) {
+    const c = normalizePath(current);
+    const t = normalizePath(target);
+    return c === t || c.startsWith(t);
+  }
+
+  // Mark submenu links active if currentPath matches or is under their href
   sidebarMenuLinks.forEach(link => {
     const href = link.getAttribute('href');
     if (href && pathMatchesOrStartsWith(currentPath, href)) {
       link.classList.add('active');
-
-      // Determine which menu this link belongs to by walking up the DOM
       const sideMenu = link.closest('.side-menu');
-      if (sideMenu) {
-        activeMenuBtnId = sideMenu.id; // e.g. "performance-menu" or "accountability-menu"
-      }
+      if (sideMenu) activeMenuBtnId = sideMenu.id;
     }
   });
 
-  // Mark top menu buttons active and open menu if needed
-  sidebarMenuButtons.forEach(button => {
-    const menuId = button.getAttribute('data-menu-id');
-    if (menuId === activeMenuBtnId) {
-      // Add active class to <li> parent (button is inside <li>)
-      const liParent = button.closest('li');
-      if (liParent) liParent.classList.add('active');
-      toggleSideMenu(menuId);
-    }
-  });
-
-  // Also mark any top-level link active if currentPath matches exactly
-  const sidebarTopLinks = document.querySelectorAll('#sidebar > ul > li > a');
+  // Mark top-level links active only if exact match
   sidebarTopLinks.forEach(link => {
     const href = link.getAttribute('href');
     if (href && normalizePath(currentPath) === normalizePath(href)) {
@@ -229,7 +200,25 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Global click handler for toggles and trans-bg
+  // Set active menu button and open its menu if applicable
+  sidebarMenuButtons.forEach(button => {
+    const menuId = button.getAttribute('data-menu-id');
+    if (menuId === activeMenuBtnId) {
+      button.parentElement.classList.add('active');
+      toggleSideMenu(menuId);
+    }
+  });
+
+  // Close menus on load if width <= 1600
+  if (window.innerWidth <= 1600) {
+    closeAllMenus();
+  } else if (activeMenuBtnId) {
+    // Adjust margin if menu is active on larger screens
+    const mainInfo = document.querySelector('.main-info');
+    if (mainInfo) mainInfo.style.marginLeft = '234px';
+  }
+
+  // Global click handler for toggle buttons and transparent background
   document.addEventListener('click', function (event) {
     const toggleButton = event.target.closest('[data-toggle-menu]');
     if (toggleButton) {
