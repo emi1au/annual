@@ -1,20 +1,25 @@
+// Track active menu
 let activeMenuId = null;
 
 // Toggle menu visibility
 function toggleSideMenu(menuId) {
-  const targetMenu = document.getElementById(menuId);
-  if (!targetMenu) return;
-
   const menus = document.querySelectorAll('.side-menu');
+  const mainInfo = document.querySelector('.main-info');
 
-  if (window.innerWidth < 1600) {
-    // Toggle visibility only below 1600
-    if (activeMenuId === menuId) {
-      closeAllMenus();
-    } else {
-      closeAllMenus();
-      targetMenu.style.display = 'block';
-      activeMenuId = menuId;
+  if (activeMenuId === menuId) {
+    closeAllMenus();
+    return;
+  }
+
+  closeAllMenus();
+
+  const targetMenu = document.getElementById(menuId);
+  if (targetMenu) {
+    targetMenu.style.display = 'block';
+    activeMenuId = menuId;
+
+    if (window.innerWidth > 1600 && mainInfo) {
+      mainInfo.style.marginLeft = '234px';
     }
   }
 }
@@ -26,12 +31,14 @@ function closeAllMenus() {
   });
 
   const mainInfo = document.querySelector('.main-info');
-  if (mainInfo) mainInfo.style.marginLeft = '0';
+  if (mainInfo) {
+    mainInfo.style.marginLeft = '0';
+  }
 
   activeMenuId = null;
 }
 
-// Handle outside click only on mobile
+// Outside click to close (only on mobile <768px)
 function outsideClickHandler(event) {
   if (window.innerWidth >= 768) return;
 
@@ -45,50 +52,43 @@ function outsideClickHandler(event) {
 
 document.addEventListener('click', outsideClickHandler);
 
-// Show/hide menus on resize
-function adjustMenuOnResize() {
+// Adjust margin on resize
+function adjustMainInfoMargin() {
   const mainInfo = document.querySelector('.main-info');
-  const allMenus = document.querySelectorAll('.side-menu');
+  if (!mainInfo) return;
 
-  if (window.innerWidth >= 1600) {
-    allMenus.forEach(menu => {
-      menu.style.display = 'block';
-    });
-
-    if (mainInfo && activeMenuId) {
-      mainInfo.style.marginLeft = '234px';
-    }
+  if (window.innerWidth > 1600 && activeMenuId) {
+    mainInfo.style.marginLeft = '234px';
   } else {
-    allMenus.forEach(menu => {
-      if (menu.id !== activeMenuId) {
-        menu.style.display = 'none';
-      }
-    });
-
-    if (mainInfo) mainInfo.style.marginLeft = '0';
+    mainInfo.style.marginLeft = '0';
   }
 }
 
-window.addEventListener('resize', adjustMenuOnResize);
+window.addEventListener('resize', () => {
+  adjustMainInfoMargin();
 
-// Setup on DOM ready
+  // Auto-close menu if resizing to small screen
+  if (window.innerWidth <= 1600 && activeMenuId) {
+    closeAllMenus();
+  }
+});
+
+// DOM ready
 document.addEventListener('DOMContentLoaded', function () {
-  const container = document.getElementById('sidebar-container');
-  if (!container) return;
-
-  container.innerHTML = `
+  const sidebarHTML = `
+    <!-- Side Menus -->
     <div id="performance-menu" class="side-menu">
       <div class="nd-menu">
         <div class="side-menu-title-close">
-          <h6><a href="/performance-overview/">Performance report</a></h6>
+          <h6><a href="/annual-report-2025/performance-overview/">Performance report</a></h6>
           <button class="close-btn" data-toggle-menu data-menu-id="performance-menu">&times;</button>
         </div>
         <ul>
-          <li><a href="/performance-overview/mission-1/">Mission 1</a></li>
-          <li><a href="/performance-overview/mission-2/">Mission 2</a></li>
-          <li><a href="/performance-overview/mission-3/">Mission 3</a></li>
-          <li><a href="/performance-overview/mission-4/">Mission 4</a></li>
-          <li><a href="/performance-overview/mission-5/">Mission 5</a></li>
+          <li><a href="/annual-report-2025/performance-overview/mission-1/">Mission 1</a></li>
+          <li><a href="/annual-report-2025/performance-overview/mission-2/">Mission 2</a></li>
+          <li><a href="/annual-report-2025/performance-overview/mission-3/">Mission 3</a></li>
+          <li><a href="/annual-report-2025/performance-overview/mission-4/">Mission 4</a></li>
+          <li><a href="/annual-report-2025/performance-overview/mission-5/">Mission 5</a></li>
         </ul>
       </div>
       <div class="trans-bg"></div>
@@ -97,34 +97,60 @@ document.addEventListener('DOMContentLoaded', function () {
     <div id="accountability-menu" class="side-menu">
       <div class="nd-menu">
         <div class="side-menu-title-close">
-          <h6><a href="/accountability-report/">Accountability report</a></h6>
+          <h6><a href="/annual-report-2025/accountability-report/">Accountability report</a></h6>
           <button class="close-btn" data-toggle-menu data-menu-id="accountability-menu">&times;</button>
         </div>
         <ul>
-          <li><a href="/accountability-report/annual-governance-statement/">Annual Governance</a></li>
-          <li><a href="/accountability-report/control-framework/">Control Framework</a></li>
-          <li><a href="/accountability-report/directors-report/">Director’s Report</a></li>
-          <li><a href="/accountability-report/governance-statement/">Governance Statement</a></li>
-          <li><a href="/accountability-report/remuneration/">Remuneration</a></li>
-          <li><a href="/accountability-report/staff-report/">Staff Report</a></li>
-          <li><a href="/accountability-report/audit-report/">Audit Report</a></li>
+          <li><a href="/annual-report-2025/accountability-report/annual-governance-statement/">Annual governance statement</a></li>
+          <li><a href="/annual-report-2025/accountability-report/control-framework/">Other control framework elements</a></li>
+          <li><a href="/annual-report-2025/accountability-report/directors-report/">Director’s Report</a></li>
+          <li><a href="/annual-report-2025/accountability-report/governance-statement/">Governance Statement</a></li>
+          <li><a href="/annual-report-2025/accountability-report/directors-responsibilities/">Directors’ Responsibilities</a></li>
+          <li><a href="/annual-report-2025/accountability-report/remuneration/">Remuneration</a></li>
+          <li><a href="/annual-report-2025/accountability-report/staff-report/">Staff Report</a></li>
+          <li><a href="/annual-report-2025/accountability-report/audit-report/">Audit Report</a></li>
         </ul>
       </div>
       <div class="trans-bg"></div>
     </div>
 
+    <!-- Sidebar -->
     <nav id="sidebar">
       <ul>
-        <li><a href="/"><i class="ph ph-house"></i><span>Foreword</span></a></li>
-        <li><button class="dropdown-btn" data-toggle-menu data-menu-id="performance-menu"><i class="ph ph-chart-line-up"></i><span>Performance</span></button></li>
-        <li><button class="dropdown-btn" data-toggle-menu data-menu-id="accountability-menu"><i class="ph-fill ph-copy-simple"></i><span>Accountability</span></button></li>
-        <li><a href="/dashboard.html"><i class="ph ph-file"></i><span>PDF</span></a></li>
+        <li>
+          <a href="/annual-report-2025/">
+            <i class="ph ph-house"></i>
+            <span>Foreword</span>
+          </a>
+        </li>
+        <li>
+          <button class="dropdown-btn" data-toggle-menu data-menu-id="performance-menu">
+            <i class="ph ph-chart-line-up"></i>
+            <span>Performance</span>
+          </button>
+        </li>
+        <li>
+          <button class="dropdown-btn" data-toggle-menu data-menu-id="accountability-menu">
+            <i class="ph-fill ph-copy-simple"></i>
+            <span>Accountability</span>
+          </button>
+        </li>
+        <li>
+          <a href="dashboard.html">
+            <i class="ph ph-file"></i>
+            <span>PDF</span>
+          </a>
+        </li>
       </ul>
-      <div class="logo-container"><span class="logo">DHCW</span></div>
+      <div class="logo-container">
+        <span class="logo">DHCW</span>
+      </div>
     </nav>
   `;
 
-  // Activate menu based on path
+  const container = document.getElementById('sidebar-container');
+  if (container) container.innerHTML = sidebarHTML;
+
   const currentPath = window.location.pathname;
   const sidebarLinks = document.querySelectorAll('#sidebar a, #sidebar button');
 
@@ -141,23 +167,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (!href && menuId) {
       let match = false;
+      if (menuId === 'performance-menu' && (
+        currentPath.includes('/performance-report') ||
+        currentPath.includes('/performance-overview') ||
+        currentPath.includes('/mission-')
+      )) match = true;
 
-      if (menuId === 'performance-menu' && currentPath.includes('/performance-')) match = true;
-      if (menuId === 'accountability-menu' && currentPath.includes('/accountability-')) match = true;
+      if (menuId === 'accountability-menu' && (
+        currentPath.includes('/accountability-report') ||
+        currentPath.includes('/control-framework') ||
+        currentPath.includes('/remuneration') ||
+        currentPath.includes('/staff-report') ||
+        currentPath.includes('/audit-report') ||
+        currentPath.includes('/governance')
+      )) match = true;
 
-      if (match && window.innerWidth >= 1600) {
-        const targetMenu = document.getElementById(menuId);
-        if (targetMenu) {
-          targetMenu.style.display = 'block';
-          activeMenuId = menuId;
-          const mainInfo = document.querySelector('.main-info');
-          if (mainInfo) mainInfo.style.marginLeft = '234px';
+      if (match) {
+        link.parentElement.classList.add('active');
+        if (window.innerWidth > 1600) {
+          toggleSideMenu(menuId); // only auto-open above 1600
         }
       }
     }
   });
 
-  // Handle menu button and background click
+  // Global click handler for toggles and trans-bg
   document.addEventListener('click', function (event) {
     const toggleButton = event.target.closest('[data-toggle-menu]');
     if (toggleButton) {
@@ -166,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     const bg = event.target.closest('.trans-bg');
-    if (bg && window.innerWidth < 1600) {
+    if (bg && window.innerWidth <= 1600) {
       const parentMenu = bg.closest('.side-menu');
       if (parentMenu?.id) {
         toggleSideMenu(parentMenu.id);
@@ -182,7 +216,4 @@ document.addEventListener('DOMContentLoaded', function () {
       link.textContent = fullText.substring(0, 23) + "...";
     }
   });
-
-  // Initial menu visibility check
-  adjustMenuOnResize();
 });
