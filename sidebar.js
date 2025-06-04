@@ -64,19 +64,23 @@ function adjustMainInfoMargin() {
   }
 }
 
-// Handle resize
 window.addEventListener('resize', () => {
   adjustMainInfoMargin();
 
   if (window.innerWidth <= 1600 && activeMenuId) {
+    // Auto-close menu when resizing to smaller screen
     closeAllMenus();
   }
 
-  // Re-open menu when resizing above 1600px
   if (window.innerWidth > 1600 && activeMenuId) {
-    const menu = document.getElementById(activeMenuId);
-    if (menu) {
-      menu.style.display = 'block';
+    // Reopen menu when resizing back to large screen
+    const targetMenu = document.getElementById(activeMenuId);
+    if (targetMenu) {
+      targetMenu.style.display = 'block';
+      const mainInfo = document.querySelector('.main-info');
+      if (mainInfo) {
+        mainInfo.style.marginLeft = '234px';
+      }
     }
   }
 });
