@@ -1,8 +1,114 @@
+// Track active menu
+let activeMenuId = null;
+
+// Normalize URL path for consistent comparison (removes trailing slash except root "/")
+function normalizePath(path) {
+  if (path.length > 1 && path.endsWith('/')) {
+    return path.slice(0, -1);
+  }
+  return path;
+}
+
+// Check if current path matches or starts with target path (for submenu links)
+function pathMatchesOrStartsWith(current, target) {
+  const c = normalizePath(current);
+  const t = normalizePath(target);
+  // Exact match or current path is inside target (like submenu)
+  return c === t || c.startsWith(t + '/');
+}
+
+// Toggle menu visibility
+function toggleSideMenu(menuId) {
+  const menus = document.querySelectorAll('.side-menu');
+  const mainInfo = document.querySelector('.main-info');
+
+  if (activeMenuId === menuId) {
+    closeAllMenus();
+    return;
+  }
+
+  closeAllMenus();
+
+  const targetMenu = document.getElementById(menuId);
+  if (targetMenu) {
+    targetMenu.style.display = 'block';
+    activeMenuId = menuId;
+
+    if (window.innerWidth > 1600 && mainInfo) {
+      mainInfo.style.marginLeft = '234px';
+    }
+  }
+}
+
+// Close all side menus
+function closeAllMenus() {
+  document.querySelectorAll('.side-menu').forEach(menu => {
+    menu.style.display = 'none';
+  });
+
+  const mainInfo = document.querySelector('.main-info');
+  if (mainInfo) {
+    mainInfo.style.marginLeft = '0';
+  }
+
+  activeMenuId = null;
+
+  // Also remove active class from all sidebar menu items and buttons
+  document.querySelectorAll('#sidebar li.active').forEach(el => el.classList.remove('active'));
+}
+
+// Outside click to close (only on mobile <768px)
+function outsideClickHandler(event) {
+  if (window.innerWidth >= 768) return;
+
+  const clickedInsideMenu = event.target.closest('.side-menu');
+  const clickedToggleButton = event.target.closest('[data-toggle-menu]');
+
+  if (!clickedInsideMenu && !clickedToggleButton) {
+    closeAllMenus();
+  }
+}
+
+document.addEventListener('click', outsideClickHandler);
+
+// Adjust margin on resize
+function adjustMainInfoMargin() {
+  const mainInfo = document.querySelector('.main-info');
+  if (!mainInfo) return;
+
+  if (window.innerWidth > 1600 && activeMenuId) {
+    mainInfo.style.marginLeft = '234px';
+  } else {
+    mainInfo.style.marginLeft = '0';
+  }
+}
+
+window.addEventListener('resize', () => {
+  adjustMainInfoMargin();
+
+  if (window.innerWidth <= 1600 && activeMenuId) {
+    // Auto-close menu when resizing to smaller screen
+    closeAllMenus();
+  }
+
+  if (window.innerWidth > 1600 && activeMenuId) {
+    // Reopen menu when resizing back to large screen
+    const targetMenu = document.getElementById(activeMenuId);
+    if (targetMenu) {
+      targetMenu.style.display = 'block';
+      const mainInfo = document.querySelector('.main-info');
+      if (mainInfo) {
+        mainInfo.style.marginLeft = '234px';
+      }
+    }
+  }
+});
+
+// DOM ready
 document.addEventListener('DOMContentLoaded', function () {
-  // Insert sidebar HTML
   const sidebarHTML = `
     <!-- Side Menus -->
-    <div id="performance-menu" class="side-menu" style="display:none;">
+    <div id="performance-menu" class="side-menu">
       <div class="nd-menu">
         <div class="side-menu-title-close">
           <h6><a href="/annual-report-2025/performance-overview/">Performance report</a></h6>
@@ -19,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <div class="trans-bg"></div>
     </div>
 
-    <div id="accountability-menu" class="side-menu" style="display:none;">
+    <div id="accountability-menu" class="side-menu">
       <div class="nd-menu">
         <div class="side-menu-title-close">
           <h6><a href="/annual-report-2025/accountability-report/">Accountability report</a></h6>
@@ -76,135 +182,54 @@ document.addEventListener('DOMContentLoaded', function () {
   const container = document.getElementById('sidebar-container');
   if (container) container.innerHTML = sidebarHTML;
 
-  // State to track active menu
-  let activeMenuId = null;
+  const currentPath = window.location.pathname;
 
-  // Normalize path (remove trailing slash except root "/")
-  function normalizePath(path) {
-    if (path.length > 1 && path.endsWith('/')) return path.slice(0, -1);
-    return path;
-  }
-
-  const currentPath = normalizePath(window.location.pathname);
-
-  // Toggle menu visibility and margin adjustment
-  function toggleSideMenu(menuId) {
-    const menus = document.querySelectorAll('.side-menu');
-    const mainInfo = document.querySelector('.main-info');
-
-    if (activeMenuId === menuId) {
-      closeAllMenus();
-      return;
-    }
-
-    closeAllMenus();
-
-    const targetMenu = document.getElementById(menuId);
-    if (targetMenu) {
-      targetMenu.style.display = 'block';
-      activeMenuId = menuId;
-
-      if (window.innerWidth > 1600 && mainInfo) {
-        mainInfo.style.marginLeft = '234px';
-      }
-    }
-  }
-
-  // Close all menus and reset margin
-  function closeAllMenus() {
-    document.querySelectorAll('.side-menu').forEach(menu => {
-      menu.style.display = 'none';
-    });
-    const mainInfo = document.querySelector('.main-info');
-    if (mainInfo) mainInfo.style.marginLeft = '0';
-    activeMenuId = null;
-  }
-
-  // Adjust margin on resize and open/close menu based on width
-  function adjustMainInfoMargin() {
-    const mainInfo = document.querySelector('.main-info');
-    if (!mainInfo) return;
-
-    if (window.innerWidth > 1600 && activeMenuId) {
-      mainInfo.style.marginLeft = '234px';
-      const targetMenu = document.getElementById(activeMenuId);
-      if (targetMenu) targetMenu.style.display = 'block';
-    } else {
-      mainInfo.style.marginLeft = '0';
-      if (activeMenuId) {
-        const targetMenu = document.getElementById(activeMenuId);
-        if (targetMenu) targetMenu.style.display = 'none';
-      }
-    }
-  }
-
-  // Outside click to close menu on mobile <768
-  function outsideClickHandler(event) {
-    if (window.innerWidth >= 768) return;
-
-    const clickedInsideMenu = event.target.closest('.side-menu');
-    const clickedToggleButton = event.target.closest('[data-toggle-menu]');
-
-    if (!clickedInsideMenu && !clickedToggleButton) {
-      closeAllMenus();
-    }
-  }
-
-  document.addEventListener('click', outsideClickHandler);
-
-  window.addEventListener('resize', () => {
-    adjustMainInfoMargin();
-
-    if (window.innerWidth <= 1600 && activeMenuId) {
-      closeAllMenus();
-    }
-  });
+  // Remove active classes just in case
+  document.querySelectorAll('#sidebar li.active').forEach(li => li.classList.remove('active'));
+  document.querySelectorAll('.side-menu ul li a.active').forEach(a => a.classList.remove('active'));
 
   // Find all menu buttons and links
   const sidebarMenuButtons = document.querySelectorAll('#sidebar button[data-toggle-menu]');
   const sidebarMenuLinks = document.querySelectorAll('.side-menu ul li a');
 
-  // Remove all active classes first
-  document.querySelectorAll('#sidebar li.active').forEach(li => li.classList.remove('active'));
-  document.querySelectorAll('.side-menu ul li a.active').forEach(a => a.classList.remove('active'));
+  // Track which menu button should be active
+  let activeMenuBtnId = null;
 
-  // Mark submenu links active based on current path
+  // Mark submenu links active if they match current path
   sidebarMenuLinks.forEach(link => {
     const href = link.getAttribute('href');
-    if (!href) return;
-    const normalizedHref = normalizePath(href);
-
-    if (currentPath === normalizedHref || currentPath.startsWith(normalizedHref + '/')) {
+    if (href && pathMatchesOrStartsWith(currentPath, href)) {
       link.classList.add('active');
+
+      // Determine which menu this link belongs to by walking up the DOM
       const sideMenu = link.closest('.side-menu');
       if (sideMenu) {
-        activeMenuId = sideMenu.id;
+        activeMenuBtnId = sideMenu.id; // e.g. "performance-menu" or "accountability-menu"
       }
     }
   });
 
-  // Mark top menu buttons active and open corresponding menu
+  // Mark top menu buttons active and open menu if needed
   sidebarMenuButtons.forEach(button => {
     const menuId = button.getAttribute('data-menu-id');
-    if (menuId === activeMenuId) {
-      button.parentElement.classList.add('active');
+    if (menuId === activeMenuBtnId) {
+      // Add active class to <li> parent (button is inside <li>)
+      const liParent = button.closest('li');
+      if (liParent) liParent.classList.add('active');
       toggleSideMenu(menuId);
     }
   });
 
-  // Also mark top-level link active if exact match
+  // Also mark any top-level link active if currentPath matches exactly
   const sidebarTopLinks = document.querySelectorAll('#sidebar > ul > li > a');
   sidebarTopLinks.forEach(link => {
     const href = link.getAttribute('href');
-    if (!href) return;
-    const normalizedHref = normalizePath(href);
-
-    if (currentPath === normalizedHref) {
+    if (href && normalizePath(currentPath) === normalizePath(href)) {
       link.parentElement.classList.add('active');
     }
   });
 
-  // Global click handler for toggle buttons and background overlays
+  // Global click handler for toggles and trans-bg
   document.addEventListener('click', function (event) {
     const toggleButton = event.target.closest('[data-toggle-menu]');
     if (toggleButton) {
@@ -220,7 +245,4 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
-
-  // Initial margin adjustment
-  adjustMainInfoMargin();
 });
