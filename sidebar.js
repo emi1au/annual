@@ -208,14 +208,17 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Also mark any top-level link active if currentPath matches exactly
   const sidebarTopLinks = document.querySelectorAll('#sidebar > ul > li > a');
-  sidebarTopLinks.forEach(link => {
-    const href = link.getAttribute('href');
-    if (href && isPathActive(href)) {
-      link.parentElement.classList.add('active');
-    }
-  });
+sidebarTopLinks.forEach(link => {
+  const href = link.getAttribute('href');
+  const normCurrent = currentPath.endsWith('/') ? currentPath : currentPath + '/';
+  const normHref = href.endsWith('/') ? href : href + '/';
+
+  // Match only if the path is exactly the same
+  if (normCurrent === normHref) {
+    link.parentElement.classList.add('active');
+  }
+});
 
   // Global click handler for toggles and trans-bg
   document.addEventListener('click', function (event) {
