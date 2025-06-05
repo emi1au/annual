@@ -158,12 +158,6 @@ a {
     font-weight: 400;
 }
 
-a:hover {
-    color: #005A8C;
-    text-decoration: none;
-}
-
-
 .desktop-space {
   margin: 80px 0;
 }
