@@ -450,24 +450,6 @@ a {
       display: none;
     }
 
-    .slide-mobile-img {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .slide-left-text {
-      min-height: auto;
-    }
-
-    .slide-left {
-      width: 100%;
-    }
-
-    .slide-right {
-      display: none;
-    }
-
     .card-sub-pages {
       margin: 24px 0 0 ;
     }
