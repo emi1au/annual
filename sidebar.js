@@ -268,6 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
       gsap.to("header", {
         duration: 0.5,
         filter: "grayscale(1)",
+        scale: 0.95,
         scrollTrigger: {
           trigger: "header",
           start: "top top",
