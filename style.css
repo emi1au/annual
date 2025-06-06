@@ -442,10 +442,6 @@ a {
       min-height: auto !important;
     }
 
-    .sub-pages-link {
-      display: block;
-    }
-
     .content .card-sub-pages {
       display: none;
     }
