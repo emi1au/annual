@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       gsap.to("h1", { opacity: 1 });
 
-      gsap.to("p", { opacity: 1, delay: 1, });
+      gsap.to("p", { opacity: 1, delay: 0.5, });
 
       gsap.to(".word", {
         y: "0%",
