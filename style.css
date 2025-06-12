@@ -570,6 +570,7 @@ a {
       .nd-menu li i {
     display: flex;
           font-size: 14px;
+          color: #12a3c9;
 }
 
       .side-menu ul li a { 
