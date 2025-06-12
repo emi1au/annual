@@ -569,6 +569,7 @@ a {
 
       .nd-menu li i {
     display: flex;
+          font-size: 14px;
 }
 
       .side-menu ul li a { 
