@@ -526,14 +526,14 @@ a {
       position: absolute;
       display: block;
       z-index: -2;
-      background: rgba(0, 0, 0, .1);
+      background: rgba(0, 0, 0, .2);
     }
 
     .nd-menu {
     position: fixed;
-    top: 0;
-    width: 280px;
-    height: -webkit-fill-available;
+    bottom: 0;
+    width: 100%;
+    height: auto;
     background-color: var(--base-clr);
     border: 1px solid var(--line-clr);
     border-left: none;
@@ -547,7 +547,20 @@ a {
     left: 0;
     padding: 0;
     margin: 0;
+    width: 0;
     }
+
+      .side-menu ul {
+        flex-wrap: wrap;
+      }
+
+      .nd-menu li {
+        display: flex;
+        flex: 0 0 calc(50% - 0.2rem);
+        border-radius: 4px;
+            background: hsl(219, 45%, 96%);
+      }
+      
 
   }
 
