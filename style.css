@@ -259,6 +259,12 @@ a {
     color: var(--text-clr);
   }
 
+.nd-menu li i {
+    display: none;
+}
+
+    
+
 
 /* click 2nd side menu */
 
@@ -561,10 +567,16 @@ a {
             background: hsl(219, 45%, 96%);
       }
 
+      .nd-menu li i {
+    display: flex;
+}
+
       .side-menu ul li a { 
         height: 80px;
         flex-direction: column;
         justify-content: space-around;
+        width: 100%;
+        align-items: flex-start;
       }
 
       .close-btn {
