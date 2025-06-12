@@ -544,7 +544,7 @@ a {
     border-left: none;
     padding: 20px;
     border-top-right-radius: var(--R-B);
-    border-bottom-right-radius: var(--R-B);
+    border-top-left-radius: var(--R-B);
     padding: 0;
     }
 
