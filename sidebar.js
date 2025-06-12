@@ -91,11 +91,11 @@ document.addEventListener('DOMContentLoaded', function () {
           <button class="close-btn" data-toggle-menu data-menu-id="performance-menu">&times;</button>
         </div>
         <ul>
-          <li><a href="/annual-report-2025/performance-overview/mission-1/"><i class="ph-light ph-number-circle-one"></i>Mission 1</a></li>
-          <li><a href="/annual-report-2025/performance-overview/mission-2/"><i class="ph-light ph-number-circle-two"></i>Mission 2</a></li>
-          <li><a href="/annual-report-2025/performance-overview/mission-3/"><i class="ph-light ph-number-circle-three"></i>Mission 3</a></li>
-          <li><a href="/annual-report-2025/performance-overview/mission-4/"><i class="ph-light ph-number-circle-four"></i>Mission 4</a></li>
-          <li><a href="/annual-report-2025/performance-overview/mission-5/"><i class="ph-light ph-number-circle-five"></i>Mission 5</a></li>
+          <li><a href="/annual-report-2025/performance-overview/mission-1/"><i class="ph-fill ph-number-circle-one"></i>Mission 1</a></li>
+          <li><a href="/annual-report-2025/performance-overview/mission-2/"><i class="ph-fill ph-number-circle-two"></i>Mission 2</a></li>
+          <li><a href="/annual-report-2025/performance-overview/mission-3/"><i class="ph-fill ph-number-circle-three"></i>Mission 3</a></li>
+          <li><a href="/annual-report-2025/performance-overview/mission-4/"><i class="ph-fill ph-number-circle-four"></i>Mission 4</a></li>
+          <li><a href="/annual-report-2025/performance-overview/mission-5/"><i class="ph-fill ph-number-circle-five"></i>Mission 5</a></li>
         </ul>
       </div>
       <div class="trans-bg"></div>
@@ -110,49 +110,49 @@ document.addEventListener('DOMContentLoaded', function () {
         <ul>
           <li>
   <a href="/annual-report-2025/accountability-report/annual-governance-statement/">
-    <i class="ph-light ph-article"></i> Annual Governance Statement
+    <i class="ph-fill ph-article"></i> Annual Governance Statement
   </a>
 </li>
 
 <li>
   <a href="/annual-report-2025/accountability-report/control-framework/">
-    <i class="ph-light ph-shield-check"></i> Other Control Framework Elements
+    <i class="ph-fill ph-shield-check"></i> Other Control Framework Elements
   </a>
 </li>
 
 <li>
   <a href="/annual-report-2025/accountability-report/directors-report/">
-    <i class="ph-light ph-briefcase"></i> Director’s Report
+    <i class="ph-fill ph-briefcase"></i> Director’s Report
   </a>
 </li>
 
 <li>
   <a href="/annual-report-2025/accountability-report/governance-statement/">
-    <i class="ph-light ph-bank"></i> Governance Statement
+    <i class="ph-fill ph-bank"></i> Governance Statement
   </a>
 </li>
 
 <li>
   <a href="/annual-report-2025/accountability-report/directors-responsibilities/">
-    <i class="ph-light ph-user-gear"></i> Directors’ Responsibilities
+    <i class="ph-fill ph-user-gear"></i> Directors’ Responsibilities
   </a>
 </li>
 
 <li>
   <a href="/annual-report-2025/accountability-report/remuneration/">
-    <i class="ph-light ph-currency-pound-simple"></i> Remuneration
+    <i class="ph-fill ph-currency-gbp"></i> Remuneration
   </a>
 </li>
 
 <li>
   <a href="/annual-report-2025/accountability-report/staff-report/">
-    <i class="ph-light ph-users-three"></i> Staff Report
+    <i class="ph-fill ph-users-three"></i> Staff Report
   </a>
 </li>
 
 <li>
   <a href="/annual-report-2025/accountability-report/audit-report/">
-    <i class="ph-light ph-clipboard-text"></i> Audit Report
+    <i class="ph-fill ph-clipboard-text"></i> Audit Report
   </a>
 </li>
 
