@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
         </li>
         <li>
           <button class="dropdown-btn" data-toggle-menu data-menu-id="accountability-menu">
-            <i class="ph-fill ph-copy-simple"></i>
+            <i class="ph ph-copy-simple"></i>
             <span>Accountability</span>
           </button>
         </li>
