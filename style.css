@@ -517,10 +517,9 @@ a {
   /* 2 side menu */
 
     .trans-bg {
-      top: 0;
       left: 0;
       right: 0;
-      bottom: 0;
+      bottom: 90px;
       width: 100vw;
       height: 100vh;
       position: absolute;
@@ -531,7 +530,7 @@ a {
 
     .nd-menu {
     position: fixed;
-    bottom: 0;
+    bottom: 82px;
     width: 100%;
     height: auto;
     background-color: var(--base-clr);
@@ -552,6 +551,7 @@ a {
 
       .side-menu ul {
         flex-wrap: wrap;
+          flex-direction: row;
       }
 
       .nd-menu li {
@@ -559,6 +559,12 @@ a {
         flex: 0 0 calc(50% - 0.2rem);
         border-radius: 4px;
             background: hsl(219, 45%, 96%);
+      }
+
+      .side-menu ul li a { 
+        height: 80px;
+        flex-direction: column;
+        justify-content: space-around;
       }
       
 
