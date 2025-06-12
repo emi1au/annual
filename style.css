@@ -367,10 +367,6 @@ a {
     padding: 8px;
   }
 
-  .main-info {
-    padding: 8px;
-  }
-
   .main-body {
     margin-left: auto;
     margin-right: auto;
@@ -475,11 +471,12 @@ a {
     }
 
     .card-sub-pages {
-      margin: 24px 0 0 ;
+      margin: 0;
     }
 
     .m-80 {
       display: block;
+    margin: 40px 0;
     }
 
     .grid-2 {
@@ -593,10 +590,6 @@ a {
 
     .container {
       padding: 10px;
-    }
-
-    .card-sub-pages {
-      margin: 12px 0;
     }
 
     h2 { font-size: 32px; }
