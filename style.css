@@ -566,6 +566,11 @@ a {
         flex-direction: column;
         justify-content: space-around;
       }
+
+      .close-btn {
+        height: 48px;
+    width: 48px;
+      }
       
 
   }
