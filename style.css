@@ -502,6 +502,8 @@ a {
 
       p { font-size: 0.95rem; }
 
+      p.large { font-size: 1rem; }
+
       .main-page{
     grid-template-columns: 1fr;
   }
@@ -600,7 +602,7 @@ a {
     h5 { font-size: 0.95rem; }
     h6 { font-size: 0.85rem; }
     p { font-size: 0.9rem; }
-
+    p.large { font-size: 0.95rem; }
   }
 
 
