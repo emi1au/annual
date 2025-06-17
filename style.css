@@ -139,6 +139,7 @@ p {
     line-height: 24px;
     color: hsl(0deg 0% 20%);
     max-width: 760px;
+    letter-spacing: -.01em;
   }
 
 p.small {
