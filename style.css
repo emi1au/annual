@@ -36,31 +36,31 @@ html {
 
 /* Brand Colour: Navy Blue (#325083) - needs light text */
 .bg-blue {
-  background-color: #325083;
-  color: #ffffff;
+  background-color: #325083 !important;
+  color: #ffffff !important;
 }
 
 /* Brand Colour: Sky Blue (#12A3C9) - needs dark text */
 .bg-sky {
-  background-color: #12A3C9;
-  color: #0a2a3b; /* dark navy/blue-grey for better contrast */
+  background-color: #12A3C9 !important;
+  color: #0a2a3b !important; /* dark navy/blue-grey for better contrast */
 }
 
 .bg-sky-light {
-  background-color: #A6E7F5;
-  color: #1B294A;
+  background-color: #A6E7F5 !important;
+  color: #1B294A !important;
 }
 
 /* Brand Colour: Golden Yellow (#F8CA4D) - needs dark text */
 .bg-yellow {
-  background-color: #F8CA4D;
-  color: #1B294A; /* deep indigo for brand consistency and contrast */
+  background-color: #F8CA4D !important;
+  color: #1B294A !important; /* deep indigo for brand consistency and contrast */
 }
 
 /* Brand Colour: Deep Indigo (#1B294A) - needs light text */
 .bg-navy {
-  background-color: #1B294A;
-  color: #ffffff;
+  background-color: #1B294A !important;
+  color: #ffffff !important;
 }
 
 
