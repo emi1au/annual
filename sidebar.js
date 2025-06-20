@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <div class="nd-menu">
         <div class="side-menu-title-close">
           <h6><a href="/annual-report-2025/performance-overview/">Performance report</a></h6>
-          <button class="close-btn" data-toggle-menu data-menu-id="performance-menu">&times;</button>
+          <button class="close-btn" data-toggle-menu data-menu-id="performance-menu"><i class="ph ph-x-circle"></i></button>
         </div>
         <ul>
           <li><a href="/annual-report-2025/performance-overview/mission-1/"><i class="ph-fill ph-number-circle-one"></i>Mission 1</a></li>
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <div class="nd-menu">
         <div class="side-menu-title-close">
           <h6><a href="/annual-report-2025/accountability-report/">Accountability report</a></h6>
-          <button class="close-btn" data-toggle-menu data-menu-id="accountability-menu">&times;</button>
+          <button class="close-btn" data-toggle-menu data-menu-id="accountability-menu"><i class="ph ph-x-circle"></i></button>
         </div>
         <ul>
           <li>
