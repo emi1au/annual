@@ -482,7 +482,7 @@ a {
 
       .stack-area {
         width: 100%;
-        height: 300vh;
+        height: 600vh;
         position: relative;
         background: white;
         display: flex;
@@ -492,58 +492,24 @@ a {
         flex-basis: 50%;
         position: sticky;
         top: 0;
-        left: 0;
+        display: flex;
+        align-items: center;
       }
       .right-card {
         height: 100vh;
         flex-basis: 50%;
         position: sticky;
         top: 0;
-      }
-      /*Styling for the left elements content starts here...*/
-      .left {
         display: flex;
         align-items: center;
-        justify-content: center;
-        box-sizing: border-box;
-        align-items: center;
-        flex-direction: column;
       }
-      .title {
-        width: 420px;
-        font-size: 84px;
-        font-family: poppins;
-        font-weight: 700;
-        line-height: 88px;
-      }
-      .sub-title {
-        width: 420px;
-        font-family: poppins;
-        font-size: 14px;
-        margin-top: 30px;
-      }
-      .sub-title button {
-        font-family: poppins;
-        font-size: 14px;
-        padding: 15px 30px;
-        background: black;
-        color: white;
-        border-radius: 8mm;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        margin-top: 20px;
-      }
+
       /*Styling for the left elements content ends here...*/
 
       .card {
-        width: 350px;
-        height: 350px;
         border-radius: 25px;
         margin-bottom: 10px;
         position: absolute;
-        top: calc(50% - 175px);
-        left: calc(50% - 175px);
         transition: 0.5s ease-in-out;
       }
       .card:nth-child(1) {
@@ -565,20 +531,8 @@ a {
         padding: 35px;
         display: flex;
         justify-content: space-between;
-        flex-direction: column;
+        flex-direction: row;
       }
-      .sub {
-        font-family: poppins;
-        font-size: 20px;
-        font-weight: 700;
-      }
-      .content {
-        font-family: poppins;
-        font-size: 44px;
-        font-weight: 700;
-        line-height: 54px;
-      }
-      /*Styling for the card content ends here...*/
 
       .away {
         transform-origin: bottom left;
