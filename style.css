@@ -450,11 +450,37 @@ a {
     width: 100%;
     display: flex;
     gap: 10px;
-    padding-bottom: 15px;
     overflow-x: auto; /* Enables horizontal scrolling */
     white-space: nowrap;
-    scrollbar-width: auto; /* Show scrollbar in Firefox */
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
   }
+
+.sub-menu::scroll-button(left) {
+    content: "\E05A" / "Scroll Left";
+    font-family: "Phosphor" !important;
+    background: none;
+    border-radius: 8px;
+    border: 0;
+    font-size: 28px;
+    color: hsl(217.78deg 44.75% 50%);
+}
+
+
+.sub-menu::scroll-button(right) {
+    content: "\E02E" / "Scroll Right";
+    font-family: "Phosphor" !important;
+    background: none;
+    border-radius: 8px;
+    border: 0;
+    font-size: 28px;
+    color: hsl(217.78deg 44.75% 50%);
+    padding-block-end: 12px;
+}
+
+.sub-menu::scroll-button(*):disabled {
+    color: hsl(217.78deg 44.75% 90%);
+}
 
   .sub-menu a.active {
     background: hsl(217.78deg 44.75% 90%);
