@@ -98,9 +98,9 @@ html {
       content: '';
       position: absolute;
       left: 0;
-      bottom: -2px;
+      bottom: 0;
       width: 100%;
-      height: 2px;
+      height: 1.5px;
       background-color: #12A3C9;
       transition: width 0.3s ease;
     }
