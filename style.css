@@ -519,6 +519,7 @@ a {
     border: 1px solid hsl(217.78deg 44.75% 90%);
     transition: 0.25s;
     white-space: nowrap;
+    scroll-snap-align: start;
   }
 
   /* Hover effect */
