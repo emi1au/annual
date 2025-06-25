@@ -127,6 +127,7 @@ h1 {
 }
 
 .grid-left h1 {
+    font-family: 'Rubik', sans-serif;
     font-size: clamp(2rem, 5vw + 1rem, 4.5rem); /* 4.5rem = 72px */
   letter-spacing: clamp(-1px, -0.5vw, -4px);
     font-weight: 400;
