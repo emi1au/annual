@@ -7,7 +7,7 @@
 
 
 :root{
-  --base-clr:hsl(217.78deg 44.75% 97%);
+  --base-clr:hsl(217.78deg 44.75% 95%);
   --line-clr: hsl(217.78deg 44.75% 90%);
   --main-clr:hsl(217.78deg 44.75% 35.49%);
   --hover-clr: hsl(192.46deg 83.56% 80%);
@@ -346,7 +346,7 @@ a {
     align-items: center;
     padding: 12px;
     justify-content: space-between;
-    background: hsl(219, 45%, 93%);
+    background: hsl(219, 45%, 90%);
     border-radius: var(--R-B);
     margin: 4px;    
   }
@@ -364,12 +364,12 @@ a {
         display: flex;
         flex: 0 0 calc(50% - 0.2rem);
         border-radius: 4px;
-        background: hsl(219, 45%, 96%);
+        background: hsl(219, 45%, 90%);
       }
 
       .nd-menu li i {
     display: flex;
-          font-size: 14px;
+          font-size: 18px;
           color: #12a3c9;
 }
 
