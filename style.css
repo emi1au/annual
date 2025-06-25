@@ -314,7 +314,7 @@ a {
 
   .ph, .ph-fill {
     font-size: 24px;
-    color: var(--text-clr);
+    color: hsl(217.78deg 44.75% 50%);
   }
 
 .nd-menu li i {
