@@ -362,8 +362,8 @@ a {
 
 .nd-menu li {
         display: flex;
-        flex: 0 0 calc(50% - 0.2rem);
-        border-radius: 4px;
+        flex: 33%;
+        border-radius: 8px;
         background: hsl(219, 45%, 90%);
       }
 
@@ -627,6 +627,10 @@ a {
       }
     }
 
+      .nd-menu li { 
+        flex: 25%;
+      }
+
   /* 2 side menu */
 
     .trans-bg {
@@ -675,11 +679,7 @@ a {
   }
 
   @media (max-width: 480px) {
-
-    .container {
-      padding: 10px;
-    }
-
+    .container { padding: 10px; }
     h2 { font-size: 32px; }
     h3 { font-size: 1.3rem; }
     h4 { font-size: 1.1rem; }
@@ -687,6 +687,7 @@ a {
     h6 { font-size: 0.85rem; }
     p { font-size: 0.9rem; }
     p.large { font-size: 0.95rem; }
+    .nd-menu li { flex: 35%; }
   }
 
 
