@@ -480,7 +480,7 @@ a {
 }
 
 .sub-menu::scroll-button(*):disabled {
-    color: hsl(217.78deg 44.75% 85%);
+    color: hsl(217.78deg 44.75% 80%);
 }
 
   .sub-menu a.active {
