@@ -519,11 +519,12 @@ a {
     transition: 0.25s;
     white-space: nowrap;
     scroll-snap-align: start;
+    border: 1px solid hsl(217.78deg 44.75% 85%);
   }
 
   /* Hover effect */
   .sub-menu a:hover {
-    background: hsl(217.78deg 44.75% 100%);
+    background: hsl(217.78deg 44.75% 95%);
   }
 
 
