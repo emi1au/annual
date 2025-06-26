@@ -484,8 +484,8 @@ a {
 }
 
   .sub-menu a.active {
-    background: hsl(217.78deg 44.75% 90%);
-    color: hsl(217.78deg 44.75% 10%);
+    background: hsl(217.78deg 44.75% 35%);
+    color: hsl(217.78deg 44.75% 90%);
   }
 
   /* Show scrollbar for Chrome, Safari */
@@ -524,7 +524,8 @@ a {
 
   /* Hover effect */
   .sub-menu a:hover {
-    background: hsl(217.78deg 44.75% 95%);
+    background: hsl(217.78deg 44.75% 90%);
+    color: hsl(217.78deg 44.75% 30%);
   }
 
 
