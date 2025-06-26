@@ -435,7 +435,7 @@ a {
 
 .page-menu {
     position: sticky;
-    top: 8px;
+    top: 0;
     width: 100%;
     background: hsl(219, 45%, 90%);
     padding: 8px;
