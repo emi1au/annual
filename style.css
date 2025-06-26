@@ -437,7 +437,7 @@ a {
     position: sticky;
     top: 0;
     width: 100%;
-    background: hsl(219, 45%, 90%);
+    background: hsl(219, 45%, 95%);
     padding: 8px;
     z-index: 2;
     overflow: hidden;
@@ -484,7 +484,7 @@ a {
 }
 
   .sub-menu a.active {
-    background: hsl(217.78deg 44.75% 95%);
+    background: hsl(217.78deg 44.75% 90%);
     color: hsl(217.78deg 44.75% 10%);
   }
 
@@ -519,7 +519,7 @@ a {
     transition: 0.25s;
     white-space: nowrap;
     scroll-snap-align: start;
-    border: 1px solid hsl(217.78deg 44.75% 85%);
+    border: 1px solid hsl(217.78deg 44.75% 90%);
   }
 
   /* Hover effect */
