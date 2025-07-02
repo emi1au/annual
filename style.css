@@ -40,6 +40,10 @@ html {
   color: #ffffff !important;
 }
 
+.text-blue {
+  color: #325083 !important;
+}
+
 /* Brand Colour: Sky Blue (#12A3C9) - needs dark text */
 .bg-sky {
   background-color: #12A3C9 !important;
