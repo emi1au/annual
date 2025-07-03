@@ -154,7 +154,7 @@ h2 {
     font-weight: 400;
     line-height: 1.1;
     color: hsl(217.78deg 44.75% 35.49%);
-    letter-spacing: -1px;
+    letter-spacing: -2px;
     padding-top: var(--scroll-offset);
 }
 
@@ -541,7 +541,7 @@ a {
           width: 95%; /* Increases width slightly for medium screens */
       }
 
-      h2 { font-size: 45px; }
+      h2 { font-size: 45px; letter-spacing: -1px; }
       h3 { font-size: 1.6rem; }
       h4 { font-size: 1.4rem; }
       h5 { font-size: 1.15rem; }
