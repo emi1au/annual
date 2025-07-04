@@ -114,6 +114,10 @@ html {
       width: 0%;
     }
 
+.space-x {
+    margin: 64px;
+}
+
 /* Headings */
 h1 {
   font-size: clamp(2rem, 5vw + 1rem, 7.5rem);
