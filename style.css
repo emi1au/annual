@@ -145,6 +145,7 @@ h1 {
   	text-transform: none;
     mix-blend-mode: normal;
     max-width: 760px;
+    letter-spacing: -1.6px;
 }
 
 .word {
@@ -599,7 +600,7 @@ a {
       h4 { font-size: 1.2rem; }
       h5 { font-size: 1rem; }
       h6 { font-size: 0.9rem; }
-
+      .grid-left h1 { letter-spacing: -0.6px; }
       p { font-size: 0.95rem; }
 
       p.large { font-size: 1rem; }
