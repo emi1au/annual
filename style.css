@@ -114,6 +114,7 @@ html {
       width: 0%;
     }
 
+.space { height: 8px; }
 .space-x { height: 32px; }
 
 /* Headings */
