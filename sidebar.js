@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function () {
           </button>
         </li>
         <li>
-          <a href="dashboard.html">
+          <a href="/annual-report-2025/DHCW-Annual-Report-2024-2025-ENG.pdf">
             <i class="ph ph-file"></i>
             <span>PDF</span>
           </a>
