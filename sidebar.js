@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </li>
 
 <li>
-  <a href="/annual-report-2025/accountability-report/audit-report/">
+  <a href="/annual-report-2025/accountability-report/dhcw-annual-report-2024-2025-accountability-audit-report-eng-pdf/">
     <i class="ph-fill ph-clipboard-text"></i> Audit Report
   </a>
 </li>
