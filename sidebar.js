@@ -115,8 +115,8 @@ document.addEventListener('DOMContentLoaded', function () {
 </li>
 
 <li>
-  <a href="/annual-report-2025/accountability-report/control-framework/">
-    <i class="ph-fill ph-shield-check"></i> Other Control Framework Elements
+  <a href="/annual-report-2025/accountability-report/information-governance-arrangements/">
+    <i class="ph-fill ph-shield-check"></i> Information Governance Arrangements
   </a>
 </li>
 
