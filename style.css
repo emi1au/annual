@@ -15,11 +15,9 @@
     background: hsl(217.78deg 44.75% 95%);
 }
 
-button.gridjs-sort-neutral { opacity: 1; }
+button.gridjs-sort-neutral { opacity: 1 !important; }
 
 th.gridjs-th-sort .gridjs-th-content { width: 100% !important; }
-
-.gridjs-table { width: max-content !important; }
 
     /* Import Rubik font */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
