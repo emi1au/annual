@@ -17,7 +17,7 @@
 
 button.gridjs-sort-neutral { opacity: 1; }
 
-.gridjs-table thead th { white-space: normal !important; }
+th.gridjs-th-sort .gridjs-th-content { width: 100% !important; }
 
 .gridjs-table { width: max-content !important; }
 
