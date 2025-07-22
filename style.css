@@ -15,7 +15,7 @@
     background: hsl(217.78deg 44.75% 95%);
 }
 
-button.gridjs-sort-neutral { opacity: 1 !important; }
+button.gridjs-sort-neutral { opacity: 1 !important; position: absolute; bottom: 8px; right: 8px; }
 
 th.gridjs-th-sort .gridjs-th-content { width: 100% !important; }
 
