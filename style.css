@@ -3,6 +3,7 @@
 ::-webkit-scrollbar {
     background: hsl(217.78deg 44.75% 100%);
     width: 8px;
+    height: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
