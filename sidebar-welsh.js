@@ -188,6 +188,12 @@ document.addEventListener('DOMContentLoaded', function () {
             <span>PDF</span>
           </a>
         </li>
+        <li>
+          <a href="https://dhcw.nhs.wales/annual-report-2025/">  <!-- Welsh version URL -->
+            <i class="ph ph-flag"></i>
+            <span>Egnlish</span>
+          </a>
+        </li>
       </ul>
       <div class="logo-container">
         <span class="logo">DHCW</span>
