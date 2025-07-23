@@ -87,15 +87,15 @@ document.addEventListener('DOMContentLoaded', function () {
     <div id="performance-menu" class="side-menu">
       <div class="nd-menu">
         <div class="side-menu-title-close">
-          <h6><a href="/annual-report-2025/performance-overview/">Performance report</a></h6>
+          <h6><a href="/rhagair-2025/perfformiad-cyffredinol/">Adroddiad Perfformiad</a></h6>
           <button class="close-btn" data-toggle-menu data-menu-id="performance-menu"><i class="ph ph-x-circle"></i></button>
         </div>
         <ul>
-          <li><a href="/annual-report-2025/performance-overview/mission-1/"><i class="ph-fill ph-number-circle-one"></i>Mission 1</a></li>
-          <li><a href="/annual-report-2025/performance-overview/mission-2/"><i class="ph-fill ph-number-circle-two"></i>Mission 2</a></li>
-          <li><a href="/annual-report-2025/performance-overview/mission-3/"><i class="ph-fill ph-number-circle-three"></i>Mission 3</a></li>
-          <li><a href="/annual-report-2025/performance-overview/mission-4/"><i class="ph-fill ph-number-circle-four"></i>Mission 4</a></li>
-          <li><a href="/annual-report-2025/performance-overview/mission-5/"><i class="ph-fill ph-number-circle-five"></i>Mission 5</a></li>
+          <li><a href="/rhagair-2025/perfformiad-cyffredinol/missiwn-1/"><i class="ph-fill ph-number-circle-one"></i>Missiwn 1</a></li>
+          <li><a href="/rhagair-2025/perfformiad-cyffredinol/missiwn-2/"><i class="ph-fill ph-number-circle-two"></i>Missiwn 2</a></li>
+          <li><a href="/rhagair-2025/perfformiad-cyffredinol/missiwn-3/"><i class="ph-fill ph-number-circle-three"></i>Missiwn 3</a></li>
+          <li><a href="/rhagair-2025/perfformiad-cyffredinol/missiwn-4/"><i class="ph-fill ph-number-circle-four"></i>Missiwn 4</a></li>
+          <li><a href="/rhagair-2025/perfformiad-cyffredinol/missiwn-5/"><i class="ph-fill ph-number-circle-five"></i>Missiwn 5</a></li>
         </ul>
       </div>
       <div class="trans-bg"></div>
@@ -104,57 +104,57 @@ document.addEventListener('DOMContentLoaded', function () {
     <div id="accountability-menu" class="side-menu">
       <div class="nd-menu">
         <div class="side-menu-title-close">
-          <h6><a href="/annual-report-2025/accountability-report/">Accountability report</a></h6>
+          <h6><a href="/rhagair-2025/">Adroddiad Atebolrwydd</a></h6>
           <button class="close-btn" data-toggle-menu data-menu-id="accountability-menu"><i class="ph ph-x-circle"></i></button>
         </div>
         <ul>
           <li>
-  <a href="/annual-report-2025/accountability-report/annual-governance-statement/">
-    <i class="ph-fill ph-article"></i> Annual Governance Statement
-  </a>
-</li>
+            <a href="/rhagair-2025/datganiad-llywodraethu-llawlyfr/"> 
+              <i class="ph-fill ph-article"></i> Datganiad Llywodraethu Blynyddol
+            </a>
+          </li>
 
-<li>
-  <a href="/annual-report-2025/accountability-report/information-governance-arrangements/">
-    <i class="ph-fill ph-shield-check"></i> Information Governance Arrangements
-  </a>
-</li>
+          <li>
+            <a href="/rhagair-2025/trefniadau-llywodraethu-gwybodaeth/">
+              <i class="ph-fill ph-shield-check"></i> Trefniadau Llywodraethu Gwybodaeth
+            </a>
+          </li>
 
-<li>
-  <a href="/annual-report-2025/accountability-report/directors-report/">
-    <i class="ph-fill ph-briefcase"></i> Director’s Report
-  </a>
-</li>
+          <li>
+            <a href="/rhagair-2025/adroddiad-cyfarwyddwyr/">
+              <i class="ph-fill ph-briefcase"></i> Adroddiad Cyfarwyddwr
+            </a>
+          </li>
 
-<li>
-  <a href="/annual-report-2025/accountability-report/governance-statement/">
-    <i class="ph-fill ph-bank"></i> Governance Statement
-  </a>
-</li>
+          <li>
+            <a href="/rhagair-2025/datganiad-llywodraethu/">
+              <i class="ph-fill ph-bank"></i> Datganiad Llywodraethu
+            </a>
+          </li>
 
-<li>
-  <a href="/annual-report-2025/accountability-report/directors-responsibilities/">
-    <i class="ph-fill ph-user-gear"></i> Directors’ Responsibilities
-  </a>
-</li>
+          <li>
+            <a href="/rhagair-2025/cyfrifoldebau-cyfarwyddwyr/">
+              <i class="ph-fill ph-user-gear"></i> Cyfrifoldebau Cyfarwyddwyr
+            </a>
+          </li>
 
-<li>
-  <a href="/annual-report-2025/accountability-report/remuneration/">
-    <i class="ph-fill ph-currency-gbp"></i> Remuneration
-  </a>
-</li>
+          <li>
+            <a href="/rhagair-2025/ffioedd-a-thaliadau/">
+              <i class="ph-fill ph-currency-gbp"></i> Ffioedd a Thaliadau
+            </a>
+          </li>
 
-<li>
-  <a href="/annual-report-2025/accountability-report/staff-report/">
-    <i class="ph-fill ph-users-three"></i> Staff Report
-  </a>
-</li>
+          <li>
+            <a href="/rhagair-2025/adroddiad-staff/">
+              <i class="ph-fill ph-users-three"></i> Adroddiad Staff
+            </a>
+          </li>
 
-<li>
-  <a href="/annual-report-2025/accountability-report/dhcw-annual-report-2024-2025-accountability-audit-report-eng-pdf/">
-    <i class="ph-fill ph-clipboard-text"></i> Audit Report
-  </a>
-</li>
+          <li>
+            <a href="/rhagair-2025/adroddiad-archwiliad-2024-2025-cymru-pdf/">
+              <i class="ph-fill ph-clipboard-text"></i> Adroddiad Archwilio
+            </a>
+          </li>
 
         </ul>
       </div>
@@ -165,25 +165,25 @@ document.addEventListener('DOMContentLoaded', function () {
     <nav id="sidebar">
       <ul>
         <li>
-          <a href="/annual-report-2025/">
+          <a href="/rhagair-2025/">
             <i class="ph ph-house"></i>
-            <span>Foreword</span>
+            <span>Rhagair</span>
           </a>
         </li>
         <li>
           <button class="dropdown-btn" data-toggle-menu data-menu-id="performance-menu">
             <i class="ph ph-chart-line-up"></i>
-            <span>Performance</span>
+            <span>Perfformiad</span>
           </button>
         </li>
         <li>
           <button class="dropdown-btn" data-toggle-menu data-menu-id="accountability-menu">
             <i class="ph ph-copy-simple"></i>
-            <span>Accountability</span>
+            <span>Atebolrwydd</span>
           </button>
         </li>
         <li>
-          <a href="/annual-report-2025/dhcw-annual-report-2024-2025-eng-pdf">
+          <a href="/rhagair-2025/dhcw-adroddiad-blynyddol-2024-2025-cymraeg-pdf">
             <i class="ph ph-file"></i>
             <span>PDF</span>
           </a>
