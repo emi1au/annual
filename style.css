@@ -656,11 +656,11 @@ a {
       > ul{
         padding: 0;
         display: grid;
-        grid-auto-columns: 60px;
         grid-auto-flow: column;
         align-items: center;
         overflow-x: scroll;
         justify-content: space-evenly;
+          gap:0;
       }
       ul li{
         height: 100%;
