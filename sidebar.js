@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', function () {
         </li>
         <li>
           <a href="https://igdc.gig.cymru/rhagair-2025/">  <!-- Welsh version URL -->
-            <i class="ph-duotone ph-globe-hemisphere-east"></i>
+            <i class="ph ph-globe-hemisphere-east"></i>
             <span>Cymraeg</span>
           </a>
         </li>
