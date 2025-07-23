@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
           </li>
 
           <li>
-            <a href="/rhagair-2025/adroddiad-archwiliad-2024-2025-cymru-pdf/">
+            <a href="https://igdc.gig.cymru/rhagair-2025/dhcw-annual-report-2024-2025-accountability-audit-report-cym-pdf/">
               <i class="ph-fill ph-clipboard-text"></i> Adroddiad Archwilio
             </a>
           </li>
@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function () {
           </button>
         </li>
         <li>
-          <a href="/rhagair-2025/dhcw-adroddiad-blynyddol-2024-2025-cymraeg-pdf">
+          <a href="https://igdc.gig.cymru/rhagair-2025/dhcw-annual-report-2024-2025-cymreag-pdf/">
             <i class="ph ph-file"></i>
             <span>PDF</span>
           </a>
