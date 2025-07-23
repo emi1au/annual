@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function () {
         </li>
       </ul>
       <div class="logo-container">
-        <span class="logo">DHCW</span>
+        <span class="logo">IGDC</span>
       </div>
     </nav>
   `;
