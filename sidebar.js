@@ -188,6 +188,12 @@ document.addEventListener('DOMContentLoaded', function () {
             <span>PDF</span>
           </a>
         </li>
+        <li>
+          <a href="https://igdc.gig.cymru/rhagair-2025/">  <!-- Welsh version URL -->
+            <i class="ph ph-flag"></i>
+            <span>Cymraeg</span>
+          </a>
+        </li>
       </ul>
       <div class="logo-container">
         <span class="logo">DHCW</span>
