@@ -91,6 +91,16 @@ html {
   color: #ffffff !important;
 }
 
+.bg-welsh {
+    background-color: #fad8ae;
+    color: #40150a;
+}
+
+.bg-welsh:hover {
+    background-color: #ef761f;
+    color: #40150a;
+}
+
 
 /* Base styles */
 .main-page {
