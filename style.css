@@ -351,6 +351,10 @@ a {
   #sidebar li i{
     padding: 6px 12px;
     border-radius: 24px;
+    background: linear-gradient(180deg, #d0f2fb00, #d0f2fb);
+    background-size: 200% 400%;
+    background-position: top;
+    transition: background-position 0.5s ease;
   }
 
   li.active span {
@@ -362,7 +366,7 @@ a {
   }
 
   #sidebar li i:hover{
-    background-color: var(--hover-clr-2);
+    background-position: bottom;
   }
 
   .ph, .ph-fill {
