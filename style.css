@@ -92,13 +92,13 @@ html {
 }
 
 .bg-welsh {
-    background-color: #fad8ae;
-    color: #40150a;
+    background-color: #fad8ae !important;
+    color: #40150a !important;
 }
 
 .bg-welsh:hover {
-    background-color: #ef761f;
-    color: #40150a;
+    background-color: #ef761f !important;
+    color: #40150a !important;
 }
 
 
