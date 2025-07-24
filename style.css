@@ -92,14 +92,17 @@ html {
 }
 
 .bg-welsh {
-    background-color: #fad8ae !important;
+    background: linear-gradient(135deg, #fad8ae, #ef761f) !important;
+    background-size: 200% 200%;
+    background-position: left center;
     color: #40150a !important;
+    transition: background-position 0.5s ease;
 }
 
 .bg-welsh:hover {
-    background-color: #ef761f !important;
-    color: #40150a !important;
+    background-position: right center;
 }
+
 
 
 /* Base styles */
