@@ -92,8 +92,8 @@ html {
 }
 
 .bg-welsh {
-    background: linear-gradient(180deg, #fad8ae, #ef761f) !important;
-    background-size: 200% 400% !important;
+    background: linear-gradient(180deg, #fad8ae, #ef761f);
+    background-size: 200% 400%;
     background-position: top;
     color: #40150a !important;
     transition: background-position 0.3s ease;
