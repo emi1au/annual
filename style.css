@@ -104,6 +104,18 @@ html {
 }
 
 
+.bg-blue-h {
+    background: linear-gradient(180deg, #d0f2fb00, #d0f2fb);
+    background-size: 200% 400%;
+    background-position: top;
+    transition: background-position 0.3s ease;;
+}
+
+.bg-blue-h:hover {
+    background-position: top;
+}
+
+
 
 /* Base styles */
 .main-page {
@@ -351,10 +363,6 @@ a {
   #sidebar li i{
     padding: 6px 12px;
     border-radius: 24px;
-    background: linear-gradient(180deg, #d0f2fb00, #d0f2fb);
-    background-size: 200% 400%;
-    background-position: top;
-    transition: background-position 0.3s ease;
   }
 
   li.active span {
@@ -363,10 +371,6 @@ a {
 
   #sidebar li.active i{
     background-color: var(--hover-clr);
-  }
-
-  #sidebar li i:hover{
-    background-position: bottom;
   }
 
   .ph, .ph-fill {
