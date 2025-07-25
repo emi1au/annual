@@ -93,14 +93,14 @@ html {
 
 .bg-welsh {
     background: linear-gradient(180deg, #fad8ae, #ef761f) !important;
-    background-size: 200% 200% !important;
-    background-position: left center !important;
+    background-size: 200% 400% !important;
+    background-position: top !important;
     color: #40150a !important;
     transition: background-position 0.3s ease;
 }
 
 .bg-welsh:hover {
-    background-position: right center !important;
+    background-position: bottom;
 }
 
 
@@ -112,7 +112,7 @@ html {
 }
 
 .bg-blue-h:hover {
-    background-position: top;
+    background-position: bottom;
 }
 
 
