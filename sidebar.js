@@ -166,25 +166,25 @@ document.addEventListener('DOMContentLoaded', function () {
       <ul>
         <li>
           <a href="/annual-report-2025/">
-            <i class="ph ph-house"></i>
+            <i class="ph ph-house bg-blue-h"></i>
             <span>Foreword</span>
           </a>
         </li>
         <li>
           <button class="dropdown-btn" data-toggle-menu data-menu-id="performance-menu">
-            <i class="ph ph-chart-line-up"></i>
+            <i class="ph ph-chart-line-up bg-blue-h"></i>
             <span>Performance</span>
           </button>
         </li>
         <li>
           <button class="dropdown-btn" data-toggle-menu data-menu-id="accountability-menu">
-            <i class="ph ph-copy-simple"></i>
+            <i class="ph ph-copy-simple bg-blue-h"></i>
             <span>Accountability</span>
           </button>
         </li>
         <li>
           <a href="/annual-report-2025/dhcw-annual-report-2024-2025-eng-pdf">
-            <i class="ph ph-file"></i>
+            <i class="ph ph-file bg-blue-h"></i>
             <span>PDF</span>
           </a>
         </li>
