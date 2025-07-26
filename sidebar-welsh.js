@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <li>
           <a href="https://dhcw.nhs.wales/annual-report-2025/">  <!-- Welsh version URL -->
             <i class="ph ph-globe-hemisphere-east"></i>
-            <span>Egnlish</span>
+            <span>English</span>
           </a>
         </li>
       </ul>
