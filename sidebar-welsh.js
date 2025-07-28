@@ -166,31 +166,31 @@ document.addEventListener('DOMContentLoaded', function () {
       <ul>
         <li>
           <a href="/rhagair-2025/">
-            <i class="ph ph-house"></i>
+            <i class="ph ph-house bg-blue-h"></i>
             <span>Rhagair</span>
           </a>
         </li>
         <li>
           <button class="dropdown-btn" data-toggle-menu data-menu-id="performance-menu">
-            <i class="ph ph-chart-line-up"></i>
+            <i class="ph ph-chart-line-up bg-blue-h"></i>
             <span>Perfformiad</span>
           </button>
         </li>
         <li>
           <button class="dropdown-btn" data-toggle-menu data-menu-id="accountability-menu">
-            <i class="ph ph-copy-simple"></i>
+            <i class="ph ph-copy-simple bg-blue-h"></i>
             <span>Atebolrwydd</span>
           </button>
         </li>
         <li>
           <a href="https://igdc.gig.cymru/rhagair-2025/dhcw-annual-report-2024-2025-cymreag-pdf/">
-            <i class="ph ph-file"></i>
+            <i class="ph ph-file bg-blue-h"></i>
             <span>PDF</span>
           </a>
         </li>
         <li>
           <a href="https://dhcw.nhs.wales/annual-report-2025/">  <!-- Welsh version URL -->
-            <i class="ph ph-translate"></i>
+            <i class="ph ph-translate bg-blue-h"></i>
             <span>English</span>
           </a>
         </li>
