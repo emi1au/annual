@@ -91,11 +91,11 @@ document.addEventListener('DOMContentLoaded', function () {
           <button class="close-btn" data-toggle-menu data-menu-id="performance-menu"><i class="ph ph-x-circle"></i></button>
         </div>
         <ul>
-          <li><a href="/rhagair-2025/perfformiad-cyffredinol/missiwn-1/"><i class="ph-fill ph-number-circle-one"></i>Missiwn 1</a></li>
-          <li><a href="/rhagair-2025/perfformiad-cyffredinol/missiwn-2/"><i class="ph-fill ph-number-circle-two"></i>Missiwn 2</a></li>
-          <li><a href="/rhagair-2025/perfformiad-cyffredinol/missiwn-3/"><i class="ph-fill ph-number-circle-three"></i>Missiwn 3</a></li>
-          <li><a href="/rhagair-2025/perfformiad-cyffredinol/missiwn-4/"><i class="ph-fill ph-number-circle-four"></i>Missiwn 4</a></li>
-          <li><a href="/rhagair-2025/perfformiad-cyffredinol/missiwn-5/"><i class="ph-fill ph-number-circle-five"></i>Missiwn 5</a></li>
+          <li><a href="/rhagair-2025/perfformiad-cyffredinol/Cenhadaeth-1/"><i class="ph-fill ph-number-circle-one"></i>Missiwn 1</a></li>
+          <li><a href="/rhagair-2025/perfformiad-cyffredinol/Cenhadaeth-2/"><i class="ph-fill ph-number-circle-two"></i>Missiwn 2</a></li>
+          <li><a href="/rhagair-2025/perfformiad-cyffredinol/Cenhadaeth-3/"><i class="ph-fill ph-number-circle-three"></i>Missiwn 3</a></li>
+          <li><a href="/rhagair-2025/perfformiad-cyffredinol/Cenhadaeth-4/"><i class="ph-fill ph-number-circle-four"></i>Missiwn 4</a></li>
+          <li><a href="/rhagair-2025/perfformiad-cyffredinol/Cenhadaeth-5/"><i class="ph-fill ph-number-circle-five"></i>Missiwn 5</a></li>
         </ul>
       </div>
       <div class="trans-bg"></div>
