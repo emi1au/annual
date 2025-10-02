@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div id="accountability-menu" class="side-menu">
       <div class="nd-menu">
         <div class="side-menu-title-close">
-          <h6><a href="/rhagair-2025/">Adroddiad Atebolrwydd</a></h6>
+          <h6><a href="/rhagair-2025/adroddiad-atebolrwydd/">Adroddiad Atebolrwydd</a></h6>
           <button class="close-btn" data-toggle-menu data-menu-id="accountability-menu"><i class="ph ph-x-circle"></i></button>
         </div>
         <ul>
