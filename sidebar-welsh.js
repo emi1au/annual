@@ -109,43 +109,43 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
         <ul>
           <li>
-            <a href="/rhagair-2025/datganiad-llywodraethu-llawlyfr/"> 
+            <a href="/rhagair-2025/adroddiad-atebolrwydd/datganiad-llywodraethu-llawlyfr/"> 
               <i class="ph-fill ph-article"></i> Datganiad Llywodraethu Blynyddol
             </a>
           </li>
 
           <li>
-            <a href="/rhagair-2025/trefniadau-llywodraethu-gwybodaeth/">
+            <a href="/rhagair-2025/adroddiad-atebolrwydd/trefniadau-llywodraethu-gwybodaeth/">
               <i class="ph-fill ph-shield-check"></i> Trefniadau Llywodraethu Gwybodaeth
             </a>
           </li>
 
           <li>
-            <a href="/rhagair-2025/adroddiad-cyfarwyddwyr/">
+            <a href="/rhagair-2025/adroddiad-atebolrwydd/adroddiad-cyfarwyddwyr/">
               <i class="ph-fill ph-briefcase"></i> Adroddiad Cyfarwyddwr
             </a>
           </li>
 
           <li>
-            <a href="/rhagair-2025/datganiad-llywodraethu/">
+            <a href="/rhagair-2025/adroddiad-atebolrwydd/datganiad-llywodraethu/">
               <i class="ph-fill ph-bank"></i> Datganiad Llywodraethu
             </a>
           </li>
 
           <li>
-            <a href="/rhagair-2025/cyfrifoldebau-cyfarwyddwyr/">
+            <a href="/rhagair-2025/adroddiad-atebolrwydd/cyfrifoldebau-cyfarwyddwyr/">
               <i class="ph-fill ph-user-gear"></i> Cyfrifoldebau Cyfarwyddwyr
             </a>
           </li>
 
           <li>
-            <a href="/rhagair-2025/ffioedd-a-thaliadau/">
+            <a href="/rhagair-2025/adroddiad-atebolrwydd/ffioedd-a-thaliadau/">
               <i class="ph-fill ph-currency-gbp"></i> Ffioedd a Thaliadau
             </a>
           </li>
 
           <li>
-            <a href="/rhagair-2025/adroddiad-staff/">
+            <a href="/rhagair-2025/adroddiad-atebolrwydd/adroddiad-staff/">
               <i class="ph-fill ph-users-three"></i> Adroddiad Staff
             </a>
           </li>
