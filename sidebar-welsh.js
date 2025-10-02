@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
         <ul>
           <li>
-            <a href="/rhagair-2025/adroddiad-atebolrwydd/datganiad-llywodraethu-llawlyfr/"> 
+            <a href="/rhagair-2025/adroddiad-atebolrwydd/datganiad-llywodraethu-blynyddol/"> 
               <i class="ph-fill ph-article"></i> Datganiad Llywodraethu Blynyddol
             </a>
           </li>
