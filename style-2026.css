@@ -32,7 +32,7 @@ body.nav-open { overflow: hidden; }
     color: var(--text-light); opacity: 0.7; cursor: pointer; text-decoration: none; padding: 0.5rem 0;
     display: flex; align-items: center; gap: 0.4rem; transition: color var(--transition-fast); text-transform: uppercase; font-family: 'Inter', sans-serif;
 }
-.nav-item > a:hover, .nav-item > button:hover, .nav-item > button[aria-expanded="true"] { opacity: 1; }
+.nav-item > a:hover, .nav-item > button:hover, .nav-item > button[aria-expanded="true"] { opacity: 1; color: var(--dhcw-yellow); }
 .chevron { width: 15px; height: 15px; fill: currentColor; transition: transform var(--transition-smooth); }
 .nav-item > button[aria-expanded="true"] .chevron { transform: rotate(180deg); }
 
