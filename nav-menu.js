@@ -37,10 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="sq-col-left">
                     <div class="sq-col-title">Missions</div>
                     <button class="sq-link active" data-title="Mission 1" data-desc="Delivering high-quality digital services that support patient care across Wales." data-pills="Patient Care, Digital Health, Systems" data-img="https://emi1au.github.io/annual/img/M1.png">Mission 1</button>
-                    <button class="sq-link" data-title="Mission 2" data-desc="Empowering healthcare professionals with modern, reliable technology." data-pills="Workforce, Innovation, Equipment" data-img="img/M2.png">Mission 2</button>
-                    <button class="sq-link" data-title="Mission 3" data-desc="Harnessing data for better health outcomes and operational efficiency." data-pills="Data Science, Analytics, Research" data-img="img/M3.png">Mission 3</button>
-                    <button class="sq-link" data-title="Mission 4" data-desc="Enhancing cybersecurity and resilience within the NHS network." data-pills="Cybersecurity, Resilience, Infrastructure" data-img="img/M4.png">Mission 4</button>
-                    <button class="sq-link" data-title="Mission 5" data-desc="Fostering innovation and sustainable digital ecosystems in healthcare." data-pills="Sustainability, Green Tech, Ecosystem" data-img="img/M5.png">Mission 5</button>
+                    <button class="sq-link" data-title="Mission 2" data-desc="Empowering healthcare professionals with modern, reliable technology." data-pills="Workforce, Innovation, Equipment" data-img="/img/M2.png">Mission 2</button>
+                    <button class="sq-link" data-title="Mission 3" data-desc="Harnessing data for better health outcomes and operational efficiency." data-pills="Data Science, Analytics, Research" data-img="/img/M3.png">Mission 3</button>
+                    <button class="sq-link" data-title="Mission 4" data-desc="Enhancing cybersecurity and resilience within the NHS network." data-pills="Cybersecurity, Resilience, Infrastructure" data-img="/img/M4.png">Mission 4</button>
+                    <button class="sq-link" data-title="Mission 5" data-desc="Fostering innovation and sustainable digital ecosystems in healthcare." data-pills="Sustainability, Green Tech, Ecosystem" data-img="/img/M5.png">Mission 5</button>
                 </div>
                 <div class="sq-col-mid">
                     <div class="sq-col-title">Explore</div>
