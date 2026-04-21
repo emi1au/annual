@@ -63,7 +63,7 @@ body.nav-open { overflow: hidden; }
 .sq-col-mid { padding: 2.5rem 3rem; display: flex; flex-direction: column; gap: 16px; }
 .sq-mid-content { flex: 1; display: flex; flex-direction: column; }
 .sq-mid-title { font-size: 15px; font-weight: 600; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; cursor: pointer; transition: color var(--transition-fast); }
-.sq-mid-title:hover { opacity }
+.sq-mid-title:hover { opacity: 1; color: var(--dhcw-yellow); }
 .sq-mid-desc { font-size: 15px; color: rgba(255,255,255,0.7); line-height: 1.6; max-width: 400px; margin-bottom: auto; }
 .sq-pills { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 2rem; }
 .sq-pill { background: rgba(255,255,255,0.1); border-radius: 20px; padding: 0.4rem 0.8rem; font-size: 0.75rem; font-weight: 600; color: var(--text-light); cursor: pointer; transition: background var(--transition-fast); }
