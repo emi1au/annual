@@ -71,7 +71,7 @@ body.nav-open { overflow: hidden; }
 
 .sq-col-right { padding: 1.5rem; }
 .sq-img-wrapper { width: 100%; height: 100%; border-radius: 8px; overflow: hidden; background: rgba(0,0,0,0.2); }
-.sq-img { width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease; }
+.sq-img { width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease; aspect-ratio: 1 / 1;}
 
 @keyframes fadeUpLink { to { opacity: 1; transform: translateY(0); } }
 .site-header.modal-open .sq-modal-container.active .sq-link { animation: fadeUpLink 0.4s forwards ease-out; }
