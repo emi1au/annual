@@ -36,11 +36,11 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="sq-modal-inner">
                 <div class="sq-col-left">
                     <div class="sq-col-title">Missions</div>
-                    <button class="sq-link active" data-title="Mission 1" data-desc="Delivering high-quality digital services that support patient care across Wales." data-pills="Patient Care, Digital Health, Systems" data-img="img/m1.png">Mission 1</button>
-                    <button class="sq-link" data-title="Mission 2" data-desc="Empowering healthcare professionals with modern, reliable technology." data-pills="Workforce, Innovation, Equipment" data-img="img/m2.png">Mission 2</button>
-                    <button class="sq-link" data-title="Mission 3" data-desc="Harnessing data for better health outcomes and operational efficiency." data-pills="Data Science, Analytics, Research" data-img="img/m3.png">Mission 3</button>
-                    <button class="sq-link" data-title="Mission 4" data-desc="Enhancing cybersecurity and resilience within the NHS network." data-pills="Cybersecurity, Resilience, Infrastructure" data-img="img/m4.png">Mission 4</button>
-                    <button class="sq-link" data-title="Mission 5" data-desc="Fostering innovation and sustainable digital ecosystems in healthcare." data-pills="Sustainability, Green Tech, Ecosystem" data-img="img/m5.png">Mission 5</button>
+                    <button class="sq-link active" data-title="Mission 1" data-desc="Delivering high-quality digital services that support patient care across Wales." data-pills="Patient Care, Digital Health, Systems" data-img="https://emi1au.github.io/annual/img/M1.png">Mission 1</button>
+                    <button class="sq-link" data-title="Mission 2" data-desc="Empowering healthcare professionals with modern, reliable technology." data-pills="Workforce, Innovation, Equipment" data-img="img/M2.png">Mission 2</button>
+                    <button class="sq-link" data-title="Mission 3" data-desc="Harnessing data for better health outcomes and operational efficiency." data-pills="Data Science, Analytics, Research" data-img="img/M3.png">Mission 3</button>
+                    <button class="sq-link" data-title="Mission 4" data-desc="Enhancing cybersecurity and resilience within the NHS network." data-pills="Cybersecurity, Resilience, Infrastructure" data-img="img/M4.png">Mission 4</button>
+                    <button class="sq-link" data-title="Mission 5" data-desc="Fostering innovation and sustainable digital ecosystems in healthcare." data-pills="Sustainability, Green Tech, Ecosystem" data-img="img/M5.png">Mission 5</button>
                 </div>
                 <div class="sq-col-mid">
                     <div class="sq-col-title">Explore</div>
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <div class="sq-pills"><span class="sq-pill">Patient Care</span><span class="sq-pill">Digital Health</span><span class="sq-pill">Systems</span></div>
                     </div>
                 </div>
-                <div class="sq-col-right"><div class="sq-img-wrapper"><img src="m1.png" class="sq-img" alt="Feature Image"></div></div>
+                <div class="sq-col-right"><div class="sq-img-wrapper"><img src="https://emi1au.github.io/annual/img/M1.png" class="sq-img" alt="Feature Image"></div></div>
             </div>
         </div>
 
@@ -58,9 +58,9 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="sq-modal-inner">
                 <div class="sq-col-left">
                     <div class="sq-col-title">Reports</div>
-                    <button class="sq-link active" data-title="Accountability Report" data-desc="Comprehensive review of operational and financial accountability." data-pills="Financials, Operations, Oversight" data-img="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80">Accountability Report</button>
-                    <button class="sq-link" data-title="Annual Gov. Statement" data-desc="Frameworks and controls managing our corporate risks." data-pills="Risk, Compliance, Controls" data-img="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80">Annual Governance Statement</button>
-                    <button class="sq-link" data-title="Information Governance" data-desc="Ensuring strict compliance and security for patient data." data-pills="Data Privacy, Security, Compliance" data-img="https://images.unsplash.com/photo-1614064641913-6b70fea566d0?auto=format&fit=crop&w=600&q=80">Information Governance</button>
+                    <button class="sq-link active" data-title="Accountability Report" data-desc="Comprehensive review of operational and financial accountability." data-pills="Financials, Operations, Oversight" data-img="https://emi1au.github.io/annual/img/A1.png">Accountability Report</button>
+                    <button class="sq-link" data-title="Annual Gov. Statement" data-desc="Frameworks and controls managing our corporate risks." data-pills="Risk, Compliance, Controls" data-img="/img/A2.png">Annual Governance Statement</button>
+                    <button class="sq-link" data-title="Information Governance" data-desc="Ensuring strict compliance and security for patient data." data-pills="Data Privacy, Security, Compliance" data-img="/img/A3.png">Information Governance</button>
                     <button class="sq-link" data-title="Director’s Report" data-desc="Strategic updates and responsibilities from our leadership." data-pills="Leadership, Strategy, Vision" data-img="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?auto=format&fit=crop&w=600&q=80">Director’s Report</button>
                     <button class="sq-link" data-title="Governance Statement" data-desc="Outlining our governance structure and board activities." data-pills="Board, Structure, Activities" data-img="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80">Governance Statement</button>
                     <button class="sq-link" data-title="Directors’ Responsibilities" data-desc="Duties and ethical standards upheld by our directors." data-pills="Ethics, Standards, Duties" data-img="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?auto=format&fit=crop&w=600&q=80">Directors’ Responsibilities</button>
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <div class="sq-pills"><span class="sq-pill">Financials</span><span class="sq-pill">Operations</span><span class="sq-pill">Oversight</span></div>
                     </div>
                 </div>
-                <div class="sq-col-right"><div class="sq-img-wrapper"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80" class="sq-img" alt="Feature Image"></div></div>
+                <div class="sq-col-right"><div class="sq-img-wrapper"><img src="https://emi1au.github.io/annual/img/A1.png" class="sq-img" alt="Feature Image"></div></div>
             </div>
         </div>
     </header>
@@ -90,11 +90,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 <button class="mob-nav-link mob-accordion-toggle">Performance <svg class="chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button>
                 <div class="mob-sub-menu">
                     <div class="mob-sub-menu-inner">
-                        <button class="mob-sub-link" data-title="Mission 1" data-desc="Delivering high-quality digital services that support patient care across Wales." data-pills="Patient Care, Digital Health, Systems" data-img="img/m1.png">Mission 1</button>
-                        <button class="mob-sub-link" data-title="Mission 2" data-desc="Empowering healthcare professionals with modern, reliable technology." data-pills="Workforce, Innovation, Equipment" data-img="img/m2.png">Mission 2</button>
-                        <button class="mob-sub-link" data-title="Mission 3" data-desc="Harnessing data for better health outcomes and operational efficiency." data-pills="Data Science, Analytics, Research" data-img="img/m3.png">Mission 3</button>
-                        <button class="mob-sub-link" data-title="Mission 4" data-desc="Enhancing cybersecurity and resilience within the NHS network." data-pills="Cybersecurity, Resilience, Infrastructure" data-img="img/m4.png">Mission 4</button>
-                        <button class="mob-sub-link" data-title="Mission 5" data-desc="Fostering innovation and sustainable digital ecosystems in healthcare." data-pills="Sustainability, Green Tech, Ecosystem" data-img="img/m5.png">Mission 5</button>
+                        <button class="mob-sub-link" data-title="Mission 1" data-desc="Delivering high-quality digital services that support patient care across Wales." data-pills="Patient Care, Digital Health, Systems" data-img="https://emi1au.github.io/annual/img/M1.png">Mission 1</button>
+                        <button class="mob-sub-link" data-title="Mission 2" data-desc="Empowering healthcare professionals with modern, reliable technology." data-pills="Workforce, Innovation, Equipment" data-img="img/M2.png">Mission 2</button>
+                        <button class="mob-sub-link" data-title="Mission 3" data-desc="Harnessing data for better health outcomes and operational efficiency." data-pills="Data Science, Analytics, Research" data-img="img/M3.png">Mission 3</button>
+                        <button class="mob-sub-link" data-title="Mission 4" data-desc="Enhancing cybersecurity and resilience within the NHS network." data-pills="Cybersecurity, Resilience, Infrastructure" data-img="img/M4.png">Mission 4</button>
+                        <button class="mob-sub-link" data-title="Mission 5" data-desc="Fostering innovation and sustainable digital ecosystems in healthcare." data-pills="Sustainability, Green Tech, Ecosystem" data-img="img/M5.png">Mission 5</button>
                     </div>
                 </div>
             </div>
