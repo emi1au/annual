@@ -33,7 +33,7 @@ body.nav-open { overflow: hidden; }
     display: flex; align-items: center; gap: 0.4rem; transition: color var(--transition-fast); text-transform: uppercase; font-family: 'Inter', sans-serif;
 }
 .nav-item > a:hover, .nav-item > button:hover, .nav-item > button[aria-expanded="true"] { opacity: 0.8; }
-.chevron { width: 10px; height: 10px; fill: currentColor; transition: transform var(--transition-smooth); }
+.chevron { width: 15px; height: 15px; fill: currentColor; transition: transform var(--transition-smooth); }
 .nav-item > button[aria-expanded="true"] .chevron { transform: rotate(180deg); }
 
 .header-right { display: flex; align-items: center; gap: 1.5rem; z-index: 1001; }
