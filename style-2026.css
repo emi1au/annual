@@ -6,7 +6,7 @@
     --dhcw-yellow: #F8CA4D;
     --text-light: #ffffff;
     --text-dark: #1f2937;
-    --nav-height: 80px;
+    --nav-height: 60px;
     --transition-smooth: 0.4s cubic-bezier(0.25, 1, 0.3, 1);
     --transition-fast: 0.2s ease;
 }
