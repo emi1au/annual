@@ -6,8 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!sidebarContainer) return;
 
     // 1. INJECT THE HTML
-    // Note: To change images, change "m1.png" etc to your full GitHub raw URLs if they break on sub-pages
-    // Example: "https://emi1au.github.io/annual/images/m1.png"
     const navHTML = `
     <!-- NAVIGATION HEADER -->
     <header class="site-header" id="site-header">
@@ -27,7 +25,12 @@ document.addEventListener("DOMContentLoaded", () => {
             <!-- RIGHT ALIGNED TOGGLES -->
             <div class="header-right">
                 <button class="lang-btn" aria-label="Translate to Welsh">Cymraeg</button>
-                <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Open mobile menu" aria-expanded="false">☰</button>
+                <!-- Animated Hamburger Toggle -->
+                <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Open mobile menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
             </div>
         </div>
 
@@ -36,16 +39,16 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="sq-modal-inner">
                 <div class="sq-col-left">
                     <div class="sq-col-title">Missions</div>
-                    <button class="sq-link active" data-title="Mission 1" data-desc="Delivering high-quality digital services that support patient care across Wales." data-pills="Patient Care, Digital Health, Systems" data-img="https://emi1au.github.io/annual/img/M1.png">Mission 1</button>
-                    <button class="sq-link" data-title="Mission 2" data-desc="Empowering healthcare professionals with modern, reliable technology." data-pills="Workforce, Innovation, Equipment" data-img="https://emi1au.github.io/annual/img/M2.png">Mission 2</button>
-                    <button class="sq-link" data-title="Mission 3" data-desc="Harnessing data for better health outcomes and operational efficiency." data-pills="Data Science, Analytics, Research" data-img="https://emi1au.github.io/annual/img/M3.png">Mission 3</button>
-                    <button class="sq-link" data-title="Mission 4" data-desc="Enhancing cybersecurity and resilience within the NHS network." data-pills="Cybersecurity, Resilience, Infrastructure" data-img="https://emi1au.github.io/annual/img/M4.png">Mission 4</button>
-                    <button class="sq-link" data-title="Mission 5" data-desc="Fostering innovation and sustainable digital ecosystems in healthcare." data-pills="Sustainability, Green Tech, Ecosystem" data-img="https://emi1au.github.io/annual/img/M5.png">Mission 5</button>
+                    <a href="#" class="sq-link active" data-title="Mission 1" data-desc="Delivering high-quality digital services that support patient care across Wales." data-pills="Patient Care, Digital Health, Systems" data-img="https://emi1au.github.io/annual/img/M1.png">Mission 1</a>
+                    <a href="#" class="sq-link" data-title="Mission 2" data-desc="Empowering healthcare professionals with modern, reliable technology." data-pills="Workforce, Innovation, Equipment" data-img="https://emi1au.github.io/annual/img/M2.png">Mission 2</a>
+                    <a href="#" class="sq-link" data-title="Mission 3" data-desc="Harnessing data for better health outcomes and operational efficiency." data-pills="Data Science, Analytics, Research" data-img="https://emi1au.github.io/annual/img/M3.png">Mission 3</a>
+                    <a href="#" class="sq-link" data-title="Mission 4" data-desc="Enhancing cybersecurity and resilience within the NHS network." data-pills="Cybersecurity, Resilience, Infrastructure" data-img="https://emi1au.github.io/annual/img/M4.png">Mission 4</a>
+                    <a href="#" class="sq-link" data-title="Mission 5" data-desc="Fostering innovation and sustainable digital ecosystems in healthcare." data-pills="Sustainability, Green Tech, Ecosystem" data-img="https://emi1au.github.io/annual/img/M5.png">Mission 5</a>
                 </div>
                 <div class="sq-col-mid">
                     <div class="sq-col-title">Explore</div>
                     <div class="sq-mid-content">
-                        <div class="sq-mid-title"><span class="sq-mid-title-text">Mission 1</span> <span>→</span></div>
+                        <a href="#" class="sq-mid-title sq-mid-title-link"><span class="sq-mid-title-text">Mission 1</span> <span>→</span></a>
                         <p class="sq-mid-desc">Delivering high-quality digital services that support patient care across Wales.</p>
                         <div class="sq-pills"><span class="sq-pill">Patient Care</span><span class="sq-pill">Digital Health</span><span class="sq-pill">Systems</span></div>
                     </div>
@@ -58,20 +61,20 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="sq-modal-inner">
                 <div class="sq-col-left">
                     <div class="sq-col-title">Reports</div>
-                    <button class="sq-link active" data-title="Accountability Report" data-desc="Comprehensive review of operational and financial accountability." data-pills="Financials, Operations, Oversight" data-img="https://emi1au.github.io/annual/img/A1.png">Accountability Report</button>
-                    <button class="sq-link" data-title="Annual Gov. Statement" data-desc="Frameworks and controls managing our corporate risks." data-pills="Risk, Compliance, Controls" data-img="https://emi1au.github.io/annual/img/A2.png">Annual Governance Statement</button>
-                    <button class="sq-link" data-title="Information Governance" data-desc="Ensuring strict compliance and security for patient data." data-pills="Data Privacy, Security, Compliance" data-img="https://emi1au.github.io/annual/img/A3.png">Information Governance</button>
-                    <button class="sq-link" data-title="Director’s Report" data-desc="Strategic updates and responsibilities from our leadership." data-pills="Leadership, Strategy, Vision" data-img="https://emi1au.github.io/annual/img/A4.png">Director’s Report</button>
-                    <button class="sq-link" data-title="Governance Statement" data-desc="Outlining our governance structure and board activities." data-pills="Board, Structure, Activities" data-img="https://emi1au.github.io/annual/img/A5.png">Governance Statement</button>
-                    <button class="sq-link" data-title="Directors’ Responsibilities" data-desc="Duties and ethical standards upheld by our directors." data-pills="Ethics, Standards, Duties" data-img="https://emi1au.github.io/annual/img/A6.png">Directors’ Responsibilities</button>
-                    <button class="sq-link" data-title="Remuneration" data-desc="Policy and metrics regarding staff and executive pay." data-pills="Pay Policy, Executives, Metrics" data-img="https://emi1au.github.io/annual/img/A7.png">Remuneration</button>
-                    <button class="sq-link" data-title="Staff Report" data-desc="Metrics on workforce, diversity, and organizational culture." data-pills="Diversity, Culture, Metrics" data-img="https://emi1au.github.io/annual/img/A8.png">Staff Report</button>
-                    <button class="sq-link" data-title="Audit Report" data-desc="Independent assessment of our financial statements." data-pills="Independent, Assessment, Financials" data-img="https://emi1au.github.io/annual/img/A9.png">Audit Report</button>
+                    <a href="#" class="sq-link active" data-title="Accountability Report" data-desc="Comprehensive review of operational and financial accountability." data-pills="Financials, Operations, Oversight" data-img="https://emi1au.github.io/annual/img/A1.png">Accountability Report</a>
+                    <a href="#" class="sq-link" data-title="Annual Gov. Statement" data-desc="Frameworks and controls managing our corporate risks." data-pills="Risk, Compliance, Controls" data-img="https://emi1au.github.io/annual/img/A2.png">Annual Governance Statement</a>
+                    <a href="#" class="sq-link" data-title="Information Governance" data-desc="Ensuring strict compliance and security for patient data." data-pills="Data Privacy, Security, Compliance" data-img="https://emi1au.github.io/annual/img/A3.png">Information Governance</a>
+                    <a href="#" class="sq-link" data-title="Director’s Report" data-desc="Strategic updates and responsibilities from our leadership." data-pills="Leadership, Strategy, Vision" data-img="https://emi1au.github.io/annual/img/A4.png">Director’s Report</a>
+                    <a href="#" class="sq-link" data-title="Governance Statement" data-desc="Outlining our governance structure and board activities." data-pills="Board, Structure, Activities" data-img="https://emi1au.github.io/annual/img/A5.png">Governance Statement</a>
+                    <a href="#" class="sq-link" data-title="Directors’ Responsibilities" data-desc="Duties and ethical standards upheld by our directors." data-pills="Ethics, Standards, Duties" data-img="https://emi1au.github.io/annual/img/A6.png">Directors’ Responsibilities</a>
+                    <a href="#" class="sq-link" data-title="Remuneration" data-desc="Policy and metrics regarding staff and executive pay." data-pills="Pay Policy, Executives, Metrics" data-img="https://emi1au.github.io/annual/img/A7.png">Remuneration</a>
+                    <a href="#" class="sq-link" data-title="Staff Report" data-desc="Metrics on workforce, diversity, and organizational culture." data-pills="Diversity, Culture, Metrics" data-img="https://emi1au.github.io/annual/img/A8.png">Staff Report</a>
+                    <a href="#" class="sq-link" data-title="Audit Report" data-desc="Independent assessment of our financial statements." data-pills="Independent, Assessment, Financials" data-img="https://emi1au.github.io/annual/img/A9.png">Audit Report</a>
                 </div>
                 <div class="sq-col-mid">
                     <div class="sq-col-title">Explore</div>
                     <div class="sq-mid-content">
-                        <div class="sq-mid-title"><span class="sq-mid-title-text">Accountability Report</span> <span>→</span></div>
+                        <a href="#" class="sq-mid-title sq-mid-title-link"><span class="sq-mid-title-text">Accountability Report</span> <span>→</span></a>
                         <p class="sq-mid-desc">Comprehensive review of operational and financial accountability.</p>
                         <div class="sq-pills"><span class="sq-pill">Financials</span><span class="sq-pill">Operations</span><span class="sq-pill">Oversight</span></div>
                     </div>
@@ -90,11 +93,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 <button class="mob-nav-link mob-accordion-toggle">Performance <svg class="chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button>
                 <div class="mob-sub-menu">
                     <div class="mob-sub-menu-inner">
-                        <button class="mob-sub-link" data-title="Mission 1" data-desc="Delivering high-quality digital services that support patient care across Wales." data-pills="Patient Care, Digital Health, Systems" data-img="https://emi1au.github.io/annual/img/M1.png">Mission 1</button>
-                        <button class="mob-sub-link" data-title="Mission 2" data-desc="Empowering healthcare professionals with modern, reliable technology." data-pills="Workforce, Innovation, Equipment" data-img="https://emi1au.github.io/annual/img/M2.png">Mission 2</button>
-                        <button class="mob-sub-link" data-title="Mission 3" data-desc="Harnessing data for better health outcomes and operational efficiency." data-pills="Data Science, Analytics, Research" data-img="https://emi1au.github.io/annual/img/M3.png">Mission 3</button>
-                        <button class="mob-sub-link" data-title="Mission 4" data-desc="Enhancing cybersecurity and resilience within the NHS network." data-pills="Cybersecurity, Resilience, Infrastructure" data-img="https://emi1au.github.io/annual/img/M4.png">Mission 4</button>
-                        <button class="mob-sub-link" data-title="Mission 5" data-desc="Fostering innovation and sustainable digital ecosystems in healthcare." data-pills="Sustainability, Green Tech, Ecosystem" data-img="https://emi1au.github.io/annual/img/M5.png">Mission 5</button>
+                        <a href="#" class="mob-sub-link" data-title="Mission 1" data-desc="Delivering high-quality digital services that support patient care across Wales." data-pills="Patient Care, Digital Health, Systems" data-img="https://emi1au.github.io/annual/img/M1.png">Mission 1</a>
+                        <a href="#" class="mob-sub-link" data-title="Mission 2" data-desc="Empowering healthcare professionals with modern, reliable technology." data-pills="Workforce, Innovation, Equipment" data-img="https://emi1au.github.io/annual/img/M2.png">Mission 2</a>
+                        <a href="#" class="mob-sub-link" data-title="Mission 3" data-desc="Harnessing data for better health outcomes and operational efficiency." data-pills="Data Science, Analytics, Research" data-img="https://emi1au.github.io/annual/img/M3.png">Mission 3</a>
+                        <a href="#" class="mob-sub-link" data-title="Mission 4" data-desc="Enhancing cybersecurity and resilience within the NHS network." data-pills="Cybersecurity, Resilience, Infrastructure" data-img="https://emi1au.github.io/annual/img/M4.png">Mission 4</a>
+                        <a href="#" class="mob-sub-link" data-title="Mission 5" data-desc="Fostering innovation and sustainable digital ecosystems in healthcare." data-pills="Sustainability, Green Tech, Ecosystem" data-img="https://emi1au.github.io/annual/img/M5.png">Mission 5</a>
                     </div>
                 </div>
             </div>
@@ -103,15 +106,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 <button class="mob-nav-link mob-accordion-toggle">Accountability <svg class="chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button>
                 <div class="mob-sub-menu">
                     <div class="mob-sub-menu-inner">
-                        <button class="mob-sub-link" data-title="Accountability Report" data-desc="Comprehensive review of operational and financial accountability." data-pills="Financials, Operations, Oversight" data-img="https://emi1au.github.io/annual/img/A1.png">Accountability Report</button>
-                        <button class="mob-sub-link" data-title="Annual Gov. Statement" data-desc="Frameworks and controls managing our corporate risks." data-pills="Risk, Compliance, Controls" data-img="https://emi1au.github.io/annual/img/A2.png">Annual Governance Statement</button>
-                        <button class="mob-sub-link" data-title="Information Governance" data-desc="Ensuring strict compliance and security for patient data." data-pills="Data Privacy, Security, Compliance" data-img="https://emi1au.github.io/annual/img/A3.png">Information Governance</button>
-                        <button class="mob-sub-link" data-title="Director’s Report" data-desc="Strategic updates and responsibilities from our leadership." data-pills="Leadership, Strategy, Vision" data-img="https://emi1au.github.io/annual/img/A4.png">Director’s Report</button>
-                        <button class="mob-sub-link" data-title="Governance Statement" data-desc="Outlining our governance structure and board activities." data-pills="Board, Structure, Activities" data-img="https://emi1au.github.io/annual/img/A5.png">Governance Statement</button>
-                        <button class="mob-sub-link" data-title="Directors’ Responsibilities" data-desc="Duties and ethical standards upheld by our directors." data-pills="Ethics, Standards, Duties" data-img="https://emi1au.github.io/annual/img/A6.png">Directors’ Responsibilities</button>
-                        <button class="mob-sub-link" data-title="Remuneration" data-desc="Policy and metrics regarding staff and executive pay." data-pills="Pay Policy, Executives, Metrics" data-img="https://emi1au.github.io/annual/img/A7.png">Remuneration</button>
-                        <button class="mob-sub-link" data-title="Staff Report" data-desc="Metrics on workforce, diversity, and organizational culture." data-pills="Diversity, Culture, Metrics" data-img="https://emi1au.github.io/annual/img/A8.png">Staff Report</button>
-                        <button class="mob-sub-link" data-title="Audit Report" data-desc="Independent assessment of our financial statements." data-pills="Independent, Assessment, Financials" data-img="https://emi1au.github.io/annual/img/A9.png">Audit Report</button>
+                        <a href="#" class="mob-sub-link" data-title="Accountability Report" data-desc="Comprehensive review of operational and financial accountability." data-pills="Financials, Operations, Oversight" data-img="https://emi1au.github.io/annual/img/A1.png">Accountability Report</a>
+                        <a href="#" class="mob-sub-link" data-title="Annual Gov. Statement" data-desc="Frameworks and controls managing our corporate risks." data-pills="Risk, Compliance, Controls" data-img="https://emi1au.github.io/annual/img/A2.png">Annual Governance Statement</a>
+                        <a href="#" class="mob-sub-link" data-title="Information Governance" data-desc="Ensuring strict compliance and security for patient data." data-pills="Data Privacy, Security, Compliance" data-img="https://emi1au.github.io/annual/img/A3.png">Information Governance</a>
+                        <a href="#" class="mob-sub-link" data-title="Director’s Report" data-desc="Strategic updates and responsibilities from our leadership." data-pills="Leadership, Strategy, Vision" data-img="https://emi1au.github.io/annual/img/A4.png">Director’s Report</a>
+                        <a href="#" class="mob-sub-link" data-title="Governance Statement" data-desc="Outlining our governance structure and board activities." data-pills="Board, Structure, Activities" data-img="https://emi1au.github.io/annual/img/A5.png">Governance Statement</a>
+                        <a href="#" class="mob-sub-link" data-title="Directors’ Responsibilities" data-desc="Duties and ethical standards upheld by our directors." data-pills="Ethics, Standards, Duties" data-img="https://emi1au.github.io/annual/img/A6.png">Directors’ Responsibilities</a>
+                        <a href="#" class="mob-sub-link" data-title="Remuneration" data-desc="Policy and metrics regarding staff and executive pay." data-pills="Pay Policy, Executives, Metrics" data-img="https://emi1au.github.io/annual/img/A7.png">Remuneration</a>
+                        <a href="#" class="mob-sub-link" data-title="Staff Report" data-desc="Metrics on workforce, diversity, and organizational culture." data-pills="Diversity, Culture, Metrics" data-img="https://emi1au.github.io/annual/img/A8.png">Staff Report</a>
+                        <a href="#" class="mob-sub-link" data-title="Audit Report" data-desc="Independent assessment of our financial statements." data-pills="Independent, Assessment, Financials" data-img="https://emi1au.github.io/annual/img/A9.png">Audit Report</a>
                     </div>
                 </div>
             </div>
@@ -128,7 +131,9 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             <div class="mob-detail-content">
                 <div class="mob-detail-img-wrap"><img id="mob-detail-img" src="" alt="Feature Image"></div>
-                <h3 class="mob-detail-title"><span id="mob-detail-title-text">Title</span> →</h3>
+                <h3 class="mob-detail-heading">
+                    <a href="#" class="mob-detail-title" id="mob-detail-title-link"><span id="mob-detail-title-text">Title</span> →</a>
+                </h3>
                 <p class="mob-detail-desc" id="mob-detail-desc">Description goes here.</p>
                 <div class="sq-pills" id="mob-detail-pills"></div>
             </div>
@@ -176,16 +181,29 @@ document.addEventListener("DOMContentLoaded", () => {
     
     document.addEventListener("click", (e) => { if (isModalOpen && !header.contains(e.target)) closeAllModals(); });
 
-    // Desktop Dynamic Hover
+    // Desktop Dynamic Hover & Click
     document.querySelectorAll('.sq-link').forEach(link => {
+        
+        // Prevent jumping to top if href is still "#"
+        link.addEventListener('click', (e) => {
+            if (link.getAttribute('href') === '#') e.preventDefault();
+        });
+
         link.addEventListener('mouseenter', function() {
             const wrapper = this.closest('.sq-modal-inner');
             wrapper.querySelectorAll('.sq-link').forEach(l => l.classList.remove('active'));
             this.classList.add('active');
+            
+            // Text and image updates
             wrapper.querySelector('.sq-mid-title-text').textContent = this.getAttribute('data-title');
             wrapper.querySelector('.sq-mid-desc').textContent = this.getAttribute('data-desc');
             const imgEl = wrapper.querySelector('.sq-img');
             if(imgEl.src !== this.getAttribute('data-img')) { imgEl.style.opacity = 0; setTimeout(() => { imgEl.src = this.getAttribute('data-img'); imgEl.style.opacity = 1; }, 200); }
+            
+            // Sync up the href of the "Explore" link
+            const midTitleLink = wrapper.querySelector('.sq-mid-title-link');
+            if (midTitleLink) midTitleLink.setAttribute('href', this.getAttribute('href'));
+
             const pillsContainer = wrapper.querySelector('.sq-pills');
             pillsContainer.innerHTML = '';
             const pillsData = this.getAttribute('data-pills');
@@ -208,15 +226,15 @@ document.addEventListener("DOMContentLoaded", () => {
         isMobileNavOpen = !isMobileNavOpen;
         if (isMobileNavOpen) {
             mobileNavOverlay.classList.add("active");
+            mobileToggleBtn.classList.add("is-active"); 
             document.body.classList.add("nav-open");
-            mobileToggleBtn.innerHTML = "✕";
             mobileToggleBtn.setAttribute("aria-expanded", "true");
             mobileToggleBtn.setAttribute("aria-label", "Close mobile menu");
         } else {
             mobileNavOverlay.classList.remove("active");
             mobileDetailPanel.classList.remove("active");
+            mobileToggleBtn.classList.remove("is-active"); 
             document.body.classList.remove("nav-open");
-            mobileToggleBtn.innerHTML = "☰";
             mobileToggleBtn.setAttribute("aria-expanded", "false");
             mobileToggleBtn.setAttribute("aria-label", "Open mobile menu");
         }
@@ -236,14 +254,19 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Mobile Drill-down Detail
+    // Mobile Drill-down Detail Trigger
     document.querySelectorAll('.mob-sub-link').forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault(); 
+            e.preventDefault(); // Always prevent default so we can open the panel
+            
             document.getElementById('mob-detail-title-text').textContent = this.getAttribute('data-title');
             document.getElementById('mob-detail-desc').textContent = this.getAttribute('data-desc');
             document.getElementById('mob-detail-img').src = this.getAttribute('data-img');
             
+            // Sync up the drill-down title link with this sublink's href!
+            const detailTitleLink = document.getElementById('mob-detail-title-link');
+            if (detailTitleLink) detailTitleLink.setAttribute('href', this.getAttribute('href'));
+
             const pillsContainer = document.getElementById('mob-detail-pills');
             pillsContainer.innerHTML = '';
             const pillsData = this.getAttribute('data-pills');
@@ -267,8 +290,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 isMobileNavOpen = false;
                 mobileNavOverlay.classList.remove("active");
                 mobileDetailPanel.classList.remove("active");
+                mobileToggleBtn.classList.remove("is-active"); 
                 document.body.classList.remove("nav-open");
-                mobileToggleBtn.innerHTML = "☰";
                 mobileToggleBtn.setAttribute("aria-expanded", "false");
             }
         }
