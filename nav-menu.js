@@ -39,7 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="sq-modal-inner">
                 <div class="sq-col-left">
                     <div class="sq-col-title">Missions</div>
-                    <a href="#" class="sq-link active" data-title="Mission 1" data-desc="Provide a platform for enabling digital transformation" data-pills="Patient Care, Digital Health, Systems" data-img="https://emi1au.github.io/annual/img/M1.png">Mission 1</a>
+                    <a href="#" class="sq-link active" data-title="Overview" data-desc="Overview of our performance achievements, goals, and metrics throughout the year." data-pills="Performance, Executive Summary, Key Highlights" data-img="https://emi1au.github.io/annual/img/overview.png">Overview</a>
+                    <a href="#" class="sq-link" data-title="Mission 1" data-desc="Provide a platform for enabling digital transformation" data-pills="Patient Care, Digital Health, Systems" data-img="https://emi1au.github.io/annual/img/M1.png">Mission 1</a>
                     <a href="#" class="sq-link" data-title="Mission 2" data-desc="Deliver high quality digital products and services" data-pills="Workforce, Innovation, Equipment" data-img="https://emi1au.github.io/annual/img/M2.png">Mission 2</a>
                     <a href="#" class="sq-link" data-title="Mission 3" data-desc="Expand the digital health and care record and the use of digital to improve health and care" data-pills="Data Science, Analytics, Research" data-img="https://emi1au.github.io/annual/img/M3.png">Mission 3</a>
                     <a href="#" class="sq-link" data-title="Mission 4" data-desc="Drive better values and outcomes through innovation" data-pills="Cybersecurity, Resilience, Infrastructure" data-img="https://emi1au.github.io/annual/img/M4.png">Mission 4</a>
@@ -48,12 +49,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="sq-col-mid">
                     <div class="sq-col-title">Explore</div>
                     <div class="sq-mid-content">
-                        <a href="#" class="sq-mid-title sq-mid-title-link"><span class="sq-mid-title-text">Mission 1</span> <span>→</span></a>
-                        <p class="sq-mid-desc">Provide a platform for enabling digital transformation</p>
-                        <div class="sq-pills"><span class="sq-pill">Patient Care</span><span class="sq-pill">Digital Health</span><span class="sq-pill">Systems</span></div>
+                        <a href="#" class="sq-mid-title sq-mid-title-link"><span class="sq-mid-title-text">Overview</span> <span>→</span></a>
+                        <p class="sq-mid-desc">Overview of our performance achievements, goals, and metrics throughout the year.</p>
+                        <div class="sq-pills"><span class="sq-pill">Performance</span><span class="sq-pill">Executive Summary</span><span class="sq-pill">Key Highlights</span></div>
                     </div>
                 </div>
-                <div class="sq-col-right"><div class="sq-img-wrapper"><img src="https://emi1au.github.io/annual/img/M1.png" class="sq-img" alt="Feature Image"></div></div>
+                <div class="sq-col-right"><div class="sq-img-wrapper"><img src="https://emi1au.github.io/annual/img/overview.png" class="sq-img" alt="Feature Image"></div></div>
             </div>
         </div>
 
@@ -93,6 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <button class="mob-nav-link mob-accordion-toggle">Performance <svg class="chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button>
                 <div class="mob-sub-menu">
                     <div class="mob-sub-menu-inner">
+                        <a href="#" class="mob-sub-link" data-title="Overview" data-desc="Overview of our performance achievements, goals, and metrics throughout the year." data-pills="Performance, Executive Summary, Key Highlights" data-img="https://emi1au.github.io/annual/img/overview.png">Overview</a>
                         <a href="#" class="mob-sub-link" data-title="Mission 1" data-desc="Provide a platform for enabling digital transformation" data-pills="Patient Care, Digital Health, Systems" data-img="https://emi1au.github.io/annual/img/M1.png">Mission 1</a>
                         <a href="#" class="mob-sub-link" data-title="Mission 2" data-desc="Deliver high quality digital products and services" data-pills="Workforce, Innovation, Equipment" data-img="https://emi1au.github.io/annual/img/M2.png">Mission 2</a>
                         <a href="#" class="mob-sub-link" data-title="Mission 3" data-desc="Expand the digital health and care record and the use of digital to improve health and care" data-pills="Data Science, Analytics, Research" data-img="https://emi1au.github.io/annual/img/M3.png">Mission 3</a>
