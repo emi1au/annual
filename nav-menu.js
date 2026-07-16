@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <li class="nav-item"><a href="https://dhcw.nhs.wales/annual-report-2026">Foreword</a></li>
                     <li class="nav-item"><button aria-expanded="false" aria-controls="modal-performance" data-target="performance">Performance <svg class="chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button></li>
                     <li class="nav-item"><button aria-expanded="false" aria-controls="modal-accountability" data-target="accountability">Accountability <svg class="chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button></li>
-                    <li class="nav-item"><a href="https://dhcw.nhs.wales/annual-report-2026/dhcw-idgc-annual-report-2025-2026-english-final.pdf">PDF</a></li>
+                    <li class="nav-item"><a href="https://dhcw.nhs.wales/annual-report-2026/DHCW-IGDC-Annual-Report-2025-2026-English-Final-pdf">PDF</a></li>
                 </ul>
             </nav>
 
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="sq-modal-inner">
                 <div class="sq-col-left">
                     <div class="sq-col-title">Missions</div>
-                    <a href="https://dhcw.nhs.wales/annual-report-2026/performance" class="sq-link active" data-title="Overview" data-desc="Overview of our performance achievements, goals, and metrics throughout the year." data-img="https://emi1au.github.io/annual/img/P1.jpeg">Overview</a>
+                    <a href="https://dhcw.nhs.wales/annual-report-2026/performance" class="sq-link active" data-title="Overview" data-desc="Overview of our performance achievements, goals, and metrics throughout the year." data-img="https://emi1au.github.io/annual/img/overview.png">Overview</a>
                     <a href="https://dhcw.nhs.wales/annual-report-2026/performance/mission-1" class="sq-link" data-title="Mission 1" data-desc="Provide a platform for enabling digital transformation" data-img="https://emi1au.github.io/annual/img/M1.png">Mission 1</a>
                     <a href="https://dhcw.nhs.wales/annual-report-2026/performance/mission-2" class="sq-link" data-title="Mission 2" data-desc="Deliver high quality digital products and services" data-img="https://emi1au.github.io/annual/img/M2.png">Mission 2</a>
                     <a href="https://dhcw.nhs.wales/annual-report-2026/performance/mission-3" class="sq-link" data-title="Mission 3" data-desc="Expand the digital health and care record and the use of digital to improve health and care" data-img="https://emi1au.github.io/annual/img/M3.png">Mission 3</a>
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <p class="sq-mid-desc">Overview of our performance achievements, goals, and metrics throughout the year.</p>
                     </div>
                 </div>
-                <div class="sq-col-right"><div class="sq-img-wrapper"><img src="https://emi1au.github.io/annual/img/P1.jpeg" class="sq-img" alt="Feature Image"></div></div>
+                <div class="sq-col-right"><div class="sq-img-wrapper"><img src="https://emi1au.github.io/annual/img/overview.png" class="sq-img" alt="Feature Image"></div></div>
             </div>
         </div>
 
@@ -66,10 +66,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     <a href="https://dhcw.nhs.wales/annual-report-2026/accountability-report/information-governance" class="sq-link" data-title="Information Governance" data-desc="Ensuring strict compliance and security for patient data." data-img="https://emi1au.github.io/annual/img/A3.png">Information Governance</a>
                     <a href="https://dhcw.nhs.wales/annual-report-2026/accountability-report/directors-report" class="sq-link" data-title="Director’s Report" data-desc="Strategic updates and responsibilities from our leadership." data-img="https://emi1au.github.io/annual/img/A4.png">Director’s Report</a>
                     <a href="https://dhcw.nhs.wales/annual-report-2026/accountability-report/governance-statement" class="sq-link" data-title="Governance Statement" data-desc="Outlining our governance structure and board activities." data-img="https://emi1au.github.io/annual/img/A5.png">Governance Statement</a>
-                    <a href="https://dhcw.nhs.wales/annual-report-2026/accountability-report/directors-responsibilities" class="sq-link" data-title="Directors’ Responsibilities" data-desc="Duties and ethical standards upheld by our directors." data-img="https://emi1au.github.io/annual/img/A6.png">Directors’ Responsibilities</a>
+                    <a href="https://dhcw.nhs.wales/annual-report-2026/accountability-report/accountable-officer" class="sq-link" data-title="Accountable Officer" data-desc="Duties and ethical standards upheld by our accountable officer." data-img="https://emi1au.github.io/annual/img/A6.png">Accountable Officer</a>
                     <a href="https://dhcw.nhs.wales/annual-report-2026/accountability-report/remuneration" class="sq-link" data-title="Remuneration" data-desc="Policy and metrics regarding staff and executive pay." data-img="https://emi1au.github.io/annual/img/A7.png">Remuneration</a>
                     <a href="https://dhcw.nhs.wales/annual-report-2026/accountability-report/staff-report" class="sq-link" data-title="Staff Report" data-desc="Metrics on workforce, diversity, and organizational culture." data-img="https://emi1au.github.io/annual/img/A8.png">Staff Report</a>
-                    <a href="https://dhcw.nhs.wales/annual-report-2026/accountability-report/dhcw-idgc-annual-report-2025-2026-english-accountability-audit-report.pdf" class="sq-link" data-title="Audit Report" data-desc="Independent assessment of our financial statements." data-img="https://emi1au.github.io/annual/img/A9.png">Audit Report</a>
+                    <a href="https://dhcw.nhs.wales/annual-report-2026/accountability-report/DHCW-IGDC-Annual-Report-2025-2026-English-Accountability-Audit-Report-pdf" class="sq-link" data-title="Audit Report" data-desc="Independent assessment of our financial statements." data-img="https://emi1au.github.io/annual/img/A9.png">Audit Report</a>
                 </div>
                 <div class="sq-col-mid">
                     <div class="sq-col-title">Explore</div>
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <button class="mob-nav-link mob-accordion-toggle">Performance <svg class="chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button>
                 <div class="mob-sub-menu">
                     <div class="mob-sub-menu-inner">
-                        <a href="https://dhcw.nhs.wales/annual-report-2026/performance" class="mob-sub-link" data-title="Overview" data-desc="Overview of our performance achievements, goals, and metrics throughout the year." data-img="https://emi1au.github.io/annual/img/P1.jpeg">Overview</a>
+                        <a href="https://dhcw.nhs.wales/annual-report-2026/performance" class="mob-sub-link" data-title="Overview" data-desc="Overview of our performance achievements, goals, and metrics throughout the year." data-img="https://emi1au.github.io/annual/img/overview.png">Overview</a>
                         <a href="https://dhcw.nhs.wales/annual-report-2026/performance/mission-1" class="mob-sub-link" data-title="Mission 1" data-desc="Provide a platform for enabling digital transformation" data-img="https://emi1au.github.io/annual/img/M1.png">Mission 1</a>
                         <a href="https://dhcw.nhs.wales/annual-report-2026/performance/mission-2" class="mob-sub-link" data-title="Mission 2" data-desc="Deliver high quality digital products and services" data-img="https://emi1au.github.io/annual/img/M2.png">Mission 2</a>
                         <a href="https://dhcw.nhs.wales/annual-report-2026/performance/mission-3" class="mob-sub-link" data-title="Mission 3" data-desc="Expand the digital health and care record and the use of digital to improve health and care" data-img="https://emi1au.github.io/annual/img/M3.png">Mission 3</a>
@@ -111,15 +111,15 @@ document.addEventListener("DOMContentLoaded", () => {
                         <a href="https://dhcw.nhs.wales/annual-report-2026/accountability-report/information-governance" class="mob-sub-link" data-title="Information Governance" data-desc="Ensuring strict compliance and security for patient data." data-img="https://emi1au.github.io/annual/img/A3.png">Information Governance</a>
                         <a href="https://dhcw.nhs.wales/annual-report-2026/accountability-report/directors-report" class="mob-sub-link" data-title="Director’s Report" data-desc="Strategic updates and responsibilities from our leadership." data-img="https://emi1au.github.io/annual/img/A4.png">Director’s Report</a>
                         <a href="https://dhcw.nhs.wales/annual-report-2026/accountability-report/governance-statement" class="mob-sub-link" data-title="Governance Statement" data-desc="Outlining our governance structure and board activities." data-img="https://emi1au.github.io/annual/img/A5.png">Governance Statement</a>
-                        <a href="https://dhcw.nhs.wales/annual-report-2026/accountability-report/directors-responsibilities" class="mob-sub-link" data-title="Directors’ Responsibilities" data-desc="Duties and ethical standards upheld by our directors." data-img="https://emi1au.github.io/annual/img/A6.png">Directors’ Responsibilities</a>
+                        <a href="https://dhcw.nhs.wales/annual-report-2026/accountability-report/accountable-officer" class="mob-sub-link" data-title="Accountable Officer" data-desc="Duties and ethical standards upheld by our accountable officer." data-img="https://emi1au.github.io/annual/img/A6.png">Accountable Officer</a>
                         <a href="https://dhcw.nhs.wales/annual-report-2026/accountability-report/remuneration" class="mob-sub-link" data-title="Remuneration" data-desc="Policy and metrics regarding staff and executive pay." data-img="https://emi1au.github.io/annual/img/A7.png">Remuneration</a>
                         <a href="https://dhcw.nhs.wales/annual-report-2026/accountability-report/staff-report" class="mob-sub-link" data-title="Staff Report" data-desc="Metrics on workforce, diversity, and organizational culture." data-img="https://emi1au.github.io/annual/img/A8.png">Staff Report</a>
-                        <a href="https://dhcw.nhs.wales/annual-report-2026/accountability-report/dhcw-idgc-annual-report-2025-2026-english-accountability-audit-report.pdf" class="mob-sub-link" data-title="Audit Report" data-desc="Independent assessment of our financial statements." data-img="https://emi1au.github.io/annual/img/A9.png">Audit Report</a>
+                        <a href="https://dhcw.nhs.wales/annual-report-2026/accountability-report/DHCW-IGDC-Annual-Report-2025-2026-English-Accountability-Audit-Report-pdf" class="mob-sub-link" data-title="Audit Report" data-desc="Independent assessment of our financial statements." data-img="https://emi1au.github.io/annual/img/A9.png">Audit Report</a>
                     </div>
                 </div>
             </div>
             
-            <div class="mob-nav-item"><a href="https://dhcw.nhs.wales/annual-report-2026/dhcw-idgc-annual-report-2025-2026-english-final.pdf" class="mob-nav-link">PDF Download</a></div>
+            <div class="mob-nav-item"><a href="https://dhcw.nhs.wales/annual-report-2026/DHCW-IGDC-Annual-Report-2025-2026-English-Final-pdf" class="mob-nav-link">PDF Download</a></div>
         </div>
 
         <!-- Mobile Drill-down Detail Panel -->
