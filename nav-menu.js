@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="sq-modal-inner">
                 <div class="sq-col-left">
                     <div class="sq-col-title">Missions</div>
-                    <a href="https://dhcw.nhs.wales/annual-report-2026/performance" class="sq-link active" data-title="Overview" data-desc="Overview of our performance achievements, goals, and metrics throughout the year." data-img="https://emi1au.github.io/annual/img/overview.png">Overview</a>
+                    <a href="https://dhcw.nhs.wales/annual-report-2026/performance" class="sq-link active" data-title="Overview" data-desc="Overview of our performance achievements, goals, and metrics throughout the year." data-img="https://emi1au.github.io/annual/img/P1.jpeg">Overview</a>
                     <a href="https://dhcw.nhs.wales/annual-report-2026/performance/mission-1" class="sq-link" data-title="Mission 1" data-desc="Provide a platform for enabling digital transformation" data-img="https://emi1au.github.io/annual/img/M1.png">Mission 1</a>
                     <a href="https://dhcw.nhs.wales/annual-report-2026/performance/mission-2" class="sq-link" data-title="Mission 2" data-desc="Deliver high quality digital products and services" data-img="https://emi1au.github.io/annual/img/M2.png">Mission 2</a>
                     <a href="https://dhcw.nhs.wales/annual-report-2026/performance/mission-3" class="sq-link" data-title="Mission 3" data-desc="Expand the digital health and care record and the use of digital to improve health and care" data-img="https://emi1au.github.io/annual/img/M3.png">Mission 3</a>
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <p class="sq-mid-desc">Overview of our performance achievements, goals, and metrics throughout the year.</p>
                     </div>
                 </div>
-                <div class="sq-col-right"><div class="sq-img-wrapper"><img src="https://emi1au.github.io/annual/img/overview.png" class="sq-img" alt="Feature Image"></div></div>
+                <div class="sq-col-right"><div class="sq-img-wrapper"><img src="https://emi1au.github.io/annual/img/P1.jpeg" class="sq-img" alt="Feature Image"></div></div>
             </div>
         </div>
 
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <button class="mob-nav-link mob-accordion-toggle">Performance <svg class="chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button>
                 <div class="mob-sub-menu">
                     <div class="mob-sub-menu-inner">
-                        <a href="https://dhcw.nhs.wales/annual-report-2026/performance" class="mob-sub-link" data-title="Overview" data-desc="Overview of our performance achievements, goals, and metrics throughout the year." data-img="https://emi1au.github.io/annual/img/overview.png">Overview</a>
+                        <a href="https://dhcw.nhs.wales/annual-report-2026/performance" class="mob-sub-link" data-title="Overview" data-desc="Overview of our performance achievements, goals, and metrics throughout the year." data-img="https://emi1au.github.io/annual/img/P1.jpeg">Overview</a>
                         <a href="https://dhcw.nhs.wales/annual-report-2026/performance/mission-1" class="mob-sub-link" data-title="Mission 1" data-desc="Provide a platform for enabling digital transformation" data-img="https://emi1au.github.io/annual/img/M1.png">Mission 1</a>
                         <a href="https://dhcw.nhs.wales/annual-report-2026/performance/mission-2" class="mob-sub-link" data-title="Mission 2" data-desc="Deliver high quality digital products and services" data-img="https://emi1au.github.io/annual/img/M2.png">Mission 2</a>
                         <a href="https://dhcw.nhs.wales/annual-report-2026/performance/mission-3" class="mob-sub-link" data-title="Mission 3" data-desc="Expand the digital health and care record and the use of digital to improve health and care" data-img="https://emi1au.github.io/annual/img/M3.png">Mission 3</a>
