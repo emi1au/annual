@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             <!-- RIGHT ALIGNED TOGGLES -->
             <div class="header-right">
-                <button class="lang-btn" aria-label="Translate to Welsh">Cymraeg</button>
+                <a href="https://igdc.gig.cymru/rhagair-2026/" class="lang-btn" aria-label="Translate to Welsh">Cymraeg</a>
                 <!-- Animated Hamburger Toggle -->
                 <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Open mobile menu" aria-expanded="false">
                     <span class="hamburger-line"></span>
