@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // If the container doesn't exist on the page, stop the script
     if (!sidebarContainer) return;
 
-    // 1. INJECT THE HTML (Welsh Version)
+    // 1. INJECT THE HTML (Welsh Version with English Hyperlink)
     const navHTML = `
     <!-- NAVIGATION HEADER -->
     <header class="site-header" id="site-header">
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             <!-- RIGHT ALIGNED TOGGLES -->
             <div class="header-right">
-                <button class="lang-btn" aria-label="Cyfieithu i'r Saesneg">English</button>
+                <a href="https://dhcw.nhs.wales/annual-report-2026/" class="lang-btn" aria-label="Cyfieithu i'r Saesneg">English</a>
                 <!-- Animated Hamburger Toggle -->
                 <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Agor y ddewislen symudol" aria-expanded="false">
                     <span class="hamburger-line"></span>
