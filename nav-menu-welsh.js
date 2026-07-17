@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="sq-modal-inner">
                 <div class="sq-col-left">
                     <div class="sq-col-title">Cenadaethau</div>
-                    <a href="https://igdc.gig.cymru/rhagair-2026/perfformiad-cyffredinol" class="sq-link active" data-title="Trosolwg" data-desc="Trosolwg o'n cyflawniadau perfformiad, nodau, a metrigau dros y flwyddyn." data-img="https://emi1au.github.io/annual/img/overview.png">Trosolwg</a>
+                    <a href="https://igdc.gig.cymru/rhagair-2026/perfformiad-cyffredinol" class="sq-link active" data-title="Trosolwg" data-desc="Trosolwg o'n cyflawniadau perfformiad, nodau, a metrigau dros y flwyddyn." data-img="https://emi1au.github.io/annual/img/P1.jpeg">Trosolwg</a>
                     <a href="https://igdc.gig.cymru/rhagair-2026/perfformiad-cyffredinol/Cenhadaeth-1" class="sq-link" data-title="Cenhadaeth 1" data-desc="Darparu llwyfan ar gyfer galluogi trawsnewid digidol" data-img="https://emi1au.github.io/annual/img/M1.png">Cenhadaeth 1</a>
                     <a href="https://igdc.gig.cymru/rhagair-2026/perfformiad-cyffredinol/Cenhadaeth-2" class="sq-link" data-title="Cenhadaeth 2" data-desc="Darparu cynhyrchion a gwasanaethau digidol o ansawdd uchel" data-img="https://emi1au.github.io/annual/img/M2.png">Cenhadaeth 2</a>
                     <a href="https://igdc.gig.cymru/rhagair-2026/perfformiad-cyffredinol/Cenhadaeth-3" class="sq-link" data-title="Cenhadaeth 3" data-desc="Ehangu'r cofnod iechyd a gofal digidol a'r defnydd o ddigidol i wella iechyd a gofal" data-img="https://emi1au.github.io/annual/img/M3.png">Cenhadaeth 3</a>
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <p class="sq-mid-desc">Trosolwg o'n cyflawniadau perfformiad, nodau, a metrigau dros y flwyddyn.</p>
                     </div>
                 </div>
-                <div class="sq-col-right"><div class="sq-img-wrapper"><img src="https://emi1au.github.io/annual/img/overview.png" class="sq-img" alt="Feature Image"></div></div>
+                <div class="sq-col-right"><div class="sq-img-wrapper"><img src="https://emi1au.github.io/annual/img/P1.jpeg" class="sq-img" alt="Feature Image"></div></div>
             </div>
         </div>
 
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <button class="mob-nav-link mob-accordion-toggle">Perfformiad <svg class="chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button>
                 <div class="mob-sub-menu">
                     <div class="mob-sub-menu-inner">
-                        <a href="https://igdc.gig.cymru/rhagair-2026/perfformiad-cyffredinol" class="mob-sub-link" data-title="Trosolwg" data-desc="Trosolwg o'n cyflawniadau perfformiad, nodau, a metrigau dros y flwyddyn." data-img="https://emi1au.github.io/annual/img/overview.png">Trosolwg</a>
+                        <a href="https://igdc.gig.cymru/rhagair-2026/perfformiad-cyffredinol" class="mob-sub-link" data-title="Trosolwg" data-desc="Trosolwg o'n cyflawniadau perfformiad, nodau, a metrigau dros y flwyddyn." data-img="https://emi1au.github.io/annual/img/P1.jpeg">Trosolwg</a>
                         <a href="https://igdc.gig.cymru/rhagair-2026/perfformiad-cyffredinol/Cenhadaeth-1" class="mob-sub-link" data-title="Cenhadaeth 1" data-desc="Darparu llwyfan ar gyfer galluogi trawsnewid digidol" data-img="https://emi1au.github.io/annual/img/M1.png">Cenhadaeth 1</a>
                         <a href="https://igdc.gig.cymru/rhagair-2026/perfformiad-cyffredinol/Cenhadaeth-2" class="mob-sub-link" data-title="Cenhadaeth 2" data-desc="Darparu cynhyrchion a gwasanaethau digidol o ansawdd uchel" data-img="https://emi1au.github.io/annual/img/M2.png">Cenhadaeth 2</a>
                         <a href="https://igdc.gig.cymru/rhagair-2026/perfformiad-cyffredinol/Cenhadaeth-3" class="mob-sub-link" data-title="Cenhadaeth 3" data-desc="Ehangu'r cofnod iechyd a gofal digidol a'r defnydd o ddigidol i wella iechyd a gofal" data-img="https://emi1au.github.io/annual/img/M3.png">Cenhadaeth 3</a>
