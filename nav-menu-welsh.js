@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <li class="nav-item"><a href="https://igdc.gig.cymru/rhagair-2026">Rhagair</a></li>
                     <li class="nav-item"><button aria-expanded="false" aria-controls="modal-performance" data-target="performance">Perfformiad <svg class="chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button></li>
                     <li class="nav-item"><button aria-expanded="false" aria-controls="modal-accountability" data-target="accountability">Atebolrwydd <svg class="chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button></li>
-                    <li class="nav-item"><a href="https://igdc.gig.cymru/rhagair-2026/DHCW-IGDC-Annual-Report-2025-2026-Welsh-Final-pdf">PDF</a></li>
+                    <li class="nav-item"><a href="https://igdc.gig.cymru/rhagair-2026/dhcw-igdc-annual-report-2025-2026-cymraeg-final-pdf/">PDF</a></li>
                 </ul>
             </nav>
 
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <a href="https://igdc.gig.cymru/rhagair-2026/adroddiad-atebolrwydd/cyfrifoldebau-cyfarwyddwyr" class="sq-link" data-title="Cyfrifoldebau Cyfarwyddwyr" data-desc="Dyletswyddau a safonau moesegol a gynhelir gan ein cyfarwyddwyr." data-img="https://emi1au.github.io/annual/img/A6.png">Cyfrifoldebau Cyfarwyddwyr</a>
                     <a href="https://igdc.gig.cymru/rhagair-2026/adroddiad-atebolrwydd/remunerasiwn" class="sq-link" data-title="Remunerasiwn" data-desc="Polisi a metrigau ynghylch cyflogau staff a gweithredwyr." data-img="https://emi1au.github.io/annual/img/A7.png">Remunerasiwn</a>
                     <a href="https://igdc.gig.cymru/rhagair-2026/adroddiad-atebolrwydd/adroddiad-staff" class="sq-link" data-title="Adroddiad Staff" data-desc="Metrigau ar y gweithlu, amrywiaeth, a diwylliant sefydliadol." data-img="https://emi1au.github.io/annual/img/A8.png">Adroddiad Staff</a>
-                    <a href="https://igdc.gig.cymru/rhagair-2026/adroddiad-atebolrwydd/DHCW-IGDC-Annual-Report-2025-2026-Welsh-Accountability-Audit-Report-pdf" class="sq-link" data-title="Adroddiad Archwilio" data-desc="Asesiad annibynnol o'n datganiadau ariannol." data-img="https://emi1au.github.io/annual/img/A9.png">Adroddiad Archwilio</a>
+                    <a href="https://igdc.gig.cymru/rhagair-2026/adroddiad-atebolrwydd/DHCW-IGDC-Annual-Report-2025-2026-Welsh-Accountability-Audit-Report-" class="sq-link" data-title="Adroddiad Archwilio" data-desc="Asesiad annibynnol o'n datganiadau ariannol." data-img="https://emi1au.github.io/annual/img/A9.png">Adroddiad Archwilio</a>
                 </div>
                 <div class="sq-col-mid">
                     <div class="sq-col-title">Archwilio</div>
@@ -114,12 +114,12 @@ document.addEventListener("DOMContentLoaded", () => {
                         <a href="https://igdc.gig.cymru/rhagair-2026/adroddiad-atebolrwydd/cyfrifoldebau-cyfarwyddwyr" class="mob-sub-link" data-title="Cyfrifoldebau Cyfarwyddwyr" data-desc="Dyletswyddau a safonau moesegol a gynhelir gan ein cyfarwyddwyr." data-img="https://emi1au.github.io/annual/img/A6.png">Cyfrifoldebau Cyfarwyddwyr</a>
                         <a href="https://igdc.gig.cymru/rhagair-2026/adroddiad-atebolrwydd/remunerasiwn" class="mob-sub-link" data-title="Remunerasiwn" data-desc="Polisi a metrigau ynghylch cyflogau staff a gweithredwyr." data-img="https://emi1au.github.io/annual/img/A7.png">Remunerasiwn</a>
                         <a href="https://igdc.gig.cymru/rhagair-2026/adroddiad-atebolrwydd/adroddiad-staff" class="mob-sub-link" data-title="Adroddiad Staff" data-desc="Metrigau ar y gweithlu, amrywiaeth, a diwylliant sefydliadol." data-img="https://emi1au.github.io/annual/img/A8.png">Adroddiad Staff</a>
-                        <a href="https://igdc.gig.cymru/rhagair-2026/adroddiad-atebolrwydd/DHCW-IGDC-Annual-Report-2025-2026-Welsh-Accountability-Audit-Report-pdf" class="mob-sub-link" data-title="Adroddiad Archwilio" data-desc="Asesiad annibynnol o'n datganiadau ariannol." data-img="https://emi1au.github.io/annual/img/A9.png">Adroddiad Archwilio</a>
+                        <a href="https://igdc.gig.cymru/rhagair-2026/adroddiad-atebolrwydd/DHCW-IGDC-Annual-Report-2025-2026-Welsh-Accountability-Audit-Report-" class="mob-sub-link" data-title="Adroddiad Archwilio" data-desc="Asesiad annibynnol o'n datganiadau ariannol." data-img="https://emi1au.github.io/annual/img/A9.png">Adroddiad Archwilio</a>
                     </div>
                 </div>
             </div>
             
-            <div class="mob-nav-item"><a href="https://igdc.gig.cymru/rhagair-2026/DHCW-IGDC-Annual-Report-2025-2026-Welsh-Final-pdf" class="mob-nav-link">Lawrlwytho PDF</a></div>
+            <div class="mob-nav-item"><a href="https://igdc.gig.cymru/rhagair-2026/dhcw-igdc-annual-report-2025-2026-cymraeg-final-pdf/" class="mob-nav-link">Lawrlwytho PDF</a></div>
         </div>
 
         <!-- Mobile Drill-down Detail Panel -->
